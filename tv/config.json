@@ -1,0 +1,12 @@
+{
+  "storeHouse": [
+    {
+      "sourceName": "影视源",
+      "sourceUrl": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/vod.json"
+    },
+    {
+      "sourceName": "短剧源",
+      "sourceUrl": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/duanju.json"
+    }
+  ]
+}
