@@ -1,0 +1,112 @@
+{
+  "sites": [
+    {
+      "key": "dj_猫眼",
+      "name": "猫眼",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/maccms.js",
+      "filterable": 1,
+      "ext": "{\"api\": \"https://api.maoyanapi.top/api.php/provide/vod\"}"
+    },
+    {
+      "key": "dj_damang",
+      "name": "大芒短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/damang.js",
+      "filterable": 1
+    },
+    {
+      "key": "dj_xingya",
+      "name": "星芽短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/xingya.js",
+      "filterable": 1
+    },
+    {
+      "key": "dj_jike",
+      "name": "即刻短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/jike.js",
+      "filterable": 1
+    },
+    {
+      "key": "dj_hema",
+      "name": "河马短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/hema.js",
+      "filterable": 1
+    },
+    {
+      "key": "dj_xifan",
+      "name": "西饭短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/xifan.js",
+      "filterable": 1
+    },
+    {
+      "key": "dj_heidou",
+      "name": "黑豆短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/heidou.js",
+      "filterable": 1
+    },
+    {
+      "key": "dj_djk",
+      "name": "短剧库",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/djk.js",
+      "filterable": 1
+    },
+    {
+      "key": "dj_baima",
+      "name": "白马短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/baima.js",
+      "filterable": 1
+    },
+    {
+      "key": "dj_hongdou",
+      "name": "红豆短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/hongdou.js",
+      "filterable": 1
+    },
+    {
+      "key": "cb_55514549",
+      "name": "🆖短剧┃TV",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/xbpq.js",
+      "filterable": 1,
+      "ext": "{\"分类\": \"抖音短剧$20#快手短剧$21#视频号短剧$22#热播短剧$23\", \"分类url\": \"http://www.duanjutv.cc/vodtype/{cateId}-{catePg}.html\", \"副标题\": \"公子专属\", \"播放列表\": \"\", \"播放数组\": \"stui-content__playlist&&\", \"播放标题\": \">&&\", \"播放链接\": \"href='&&'\", \"线路数组\": \"stui-pannel__head bottom-line&&\", \"线路标题\": \"title\\\">&&\", \"跳转播放链接\": \"urlDecode(var player_*url\\\":\\\"&&\\\")\"}"
+    },
+    {
+      "key": "cb_58ec8a46",
+      "name": "🧸好帅┃短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/xbpq.js",
+      "filterable": 1,
+      "ext": "{\"分类\": \"穿越$fenle#战神$fenlei2#重生$fenlei3#爱情$fenlei4#萌娃$guda#神医$shenyi#古代$gudai#玄幻$xuanhuan#言情$yanqing\", \"分类url\": \"https://nhsyy.com/vodtype/{cateId}.html\", \"图片\": \"src=\\\"&&\\\"\", \"搜索url\": \"/vodsearch/{wd}-------------.html\", \"搜索副标题\": \">&&</a >\", \"搜索数组\": \"<div class=\\\"module-item-pic\\\">&&</div>\", \"搜索标题\": \"title=\\\"&&\\\"\", \"播放数组\": \"class=\\\"sort-item\\\"&&</div>\", \"播放标题\": \">&&</a\", \"简介\": \"class=\\\"video-info-item video-info-content vod_content\\\">&&</span>\", \"线路数组\": \"data-dropdown-value=\\\"&&</div>\", \"线路标题\": \"<span>&&</span>\"}"
+    },
+    {
+      "key": "cb_f0f5f451",
+      "name": "果果 • 短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/xbpq.js",
+      "filterable": 1,
+      "ext": "{\"分类\": \"重生$1#穿越$2#爽剧$3#言情$4#都市$5#古装$6#悬疑$7#剧情$8\", \"分类url\": \"https://www.mochadj.com/i/{cateId}-{catePg}.html\", \"编码\": \"UTF-8\", \"请求头\": \"User-Agent$MOBILE_UA\"}"
+    }
+  ]
+}

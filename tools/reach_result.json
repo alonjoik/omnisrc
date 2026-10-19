@@ -1,0 +1,202 @@
+{
+ "cb_0635c664": {
+  "url": "https://85k.ltd//index.php/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/lang/{lang}/page/{catePg}/year/{year}/",
+  "reach": "dns-fail"
+ },
+ "cb_0808f9b9": {
+  "url": "https://mi2ys.com/vodshow/{cateId}-{area}-{by}-{class}-{lang}-{letter}---{catePg}---{year}.html",
+  "reach": "dns-fail"
+ },
+ "cb_0ff97120": {
+  "url": "https://www.kqyy.tv/vodshow/area/{area}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html",
+  "reach": "dns-fail"
+ },
+ "cb_16a6764c": {
+  "url": "https://v.aiwule.com/vodshow/{cateId}-{area}-{by}-{class}-{lang}-{letter}---{catePg}---{year}.html",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_1b506256": {
+  "url": "https://www.1234y.cc",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_26916fd7": {
+  "url": "https://www.nycvod.com/vodshow/{cateId}-{area}-{by}-{class}-{lang}-{letter}---{catePg}---{year}.html",
+  "reach": "dns-fail"
+ },
+ "cb_399485bb": {
+  "url": "http://plbzt.com/lists/1/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html",
+  "reach": "http-200"
+ },
+ "cb_43370df7": {
+  "url": "https://zjuba.vip/index.php/vod/show/id/{cateId}/page/{catePg}.html",
+  "reach": "http-200"
+ },
+ "cb_44df5b7e": {
+  "url": "https://www.hitv.app/",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_4978da61": {
+  "url": "https://www.pkcom.cc/vodshow/1-----------/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_4dda8434": {
+  "url": "https://www.dyyz1.app/vodshow/{cateId}-{area}--{class}-----{catePg}---{year}.html",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_4e596234": {
+  "url": "https://vip1280.net/frim/{cateId}/area/{area}/by/{by}/lang/{lang}/letter/{letter}/page/{catePg}/year/{year}.html;;x",
+  "reach": "dns-fail"
+ },
+ "cb_4ee37d77": {
+  "url": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQHiker/%E5%86%9C%E6%B0%91%E5%BD%B1%E8%A7%86.json",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_53935da1": {
+  "url": "https://www.ikanbd.com/s/{cateId}-{area}-{by}------{catePg}---{year}.html",
+  "reach": "http-404"
+ },
+ "cb_55514549": {
+  "url": "http://www.duanjutv.cc/vodtype/{cateId}-{catePg}.html",
+  "reach": "http-200"
+ },
+ "cb_58c6ebe9": {
+  "url": "https://www.tonglicable.com",
+  "reach": "http-403"
+ },
+ "cb_58ec8a46": {
+  "url": "https://nhsyy.com/vodtype/{cateId}.html",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_5f517d4d": {
+  "url": "https://www.iidie.com/type-{cateId}-{catePg}/",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_64f6cfe0": {
+  "url": "https://www.budaichuchen.net/label/qq.html",
+  "reach": "http-200"
+ },
+ "cb_68a4ce57": {
+  "url": "http://www.lxsgsy.com/search.php?page={catePg}&searchtype=5&order={by}&tid={cateId}&area={area}&year={year}&letter=&yuyan=&state=&money=&ver=&jq=[",
+  "reach": "conn-fail:ConnectionResetError"
+ },
+ "cb_6d0a79ee": {
+  "url": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQHiker/%E5%85%94%E5%B0%8F%E8%B4%9D2.json",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_75508200": {
+  "url": "https://www.xgitv.com",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_7bc3306e": {
+  "url": "https://m.yncmfs.com/",
+  "reach": "http-408"
+ },
+ "cb_867a44f2": {
+  "url": "https://www.xingkong123.com/xktype/1/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year",
+  "reach": "http-200"
+ },
+ "cb_90989c4f": {
+  "url": "https://silidm.com/",
+  "reach": "http-200"
+ },
+ "cb_9b298562": {
+  "url": "https://www.ncshdxx.com/",
+  "reach": "http-503"
+ },
+ "cb_a120f8e1": {
+  "url": "https://www.airpurging.com/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/letter/{letter}/page/{catePg}/year/{year}.html",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_aa2c9140": {
+  "url": "https://www.926dy.com/{cateId",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_aa51c9e4": {
+  "url": "http://114bate.com/hdshow/{cateId}-{area}-{by}-{class}-{lang}----{catePg}---{year}.html",
+  "reach": "http-200"
+ },
+ "cb_ae65ccf8": {
+  "url": "https://jiongciyuan.org/index.php/vod/show/area/{area}/by/{by}/class/{class}/id/{cateId}/lang/{lang}/letter/{letter}/page/{catePg}/year/{year}.html",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_af060a67": {
+  "url": "https://www.iysdq.cc/vodtype/1/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html",
+  "reach": "http-200"
+ },
+ "cb_b15a39f7": {
+  "url": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQHiker/%E5%85%94%E5%B0%8F%E8%B4%9D.json",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_b6cab277": {
+  "url": "https://honghuli.com/leibiao/{cateId}-{area}--{class}-----{catePg}---{year}.html",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_b7bda175": {
+  "url": "https://taiquantv.com/search.php?page={catePg}&searchtype=5&order={by}&area={area}&year={year}&letter={letter}&yuyan={lang}&money=&ver=&jq=&tid={cateId",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_b807b3f8": {
+  "url": "https://wzznl.buzz/search.php?page={catePg}&searchtype=5&order={by}&tid={cateId}&area={area}&year={year}&letter=&yuyan={lang}&state=&money=&ver=&jq=",
+  "reach": "dns-fail"
+ },
+ "cb_bfb9a143": {
+  "url": "https://www.sh-bridge.com/screen/{cateId}-{area}-{by}-{class}-{lang}-{letter}---{catePg}---{year}.html",
+  "reach": "http-523"
+ },
+ "cb_c151b607": {
+  "url": "https://www.qyzf88.com/qyvodshow/{cateId}-{area}-{by}-{class}-----{catePg}---{year}.html",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_c264b4e5": {
+  "url": "https://www.midianshi.com/",
+  "reach": "http-429"
+ },
+ "cb_c2bd268d": {
+  "url": "https://www.jinman6.com/index.php/vod/show/id/{cateId}/area/{area}/by/{by}/class/{class}/page/{catePg}/year/{year}.html",
+  "reach": "http-200"
+ },
+ "cb_c451a853": {
+  "url": "https://fofoyy.tv/vodshow/{cateId}-{area}-{by}-{class}--{letter}---{catePg}---{year}.html",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_ca9297f7": {
+  "url": "https://www.mgtv.fun/index.php/vod/show/id/{cateId}/area/{area}/by/{by}/class/{class}/page/{catePg}/year/{year}.html",
+  "reach": "dns-fail"
+ },
+ "cb_da195c6d": {
+  "url": "https://www.1av.shop/vodtype/25.html",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_dac52c91": {
+  "url": "https://www.modiandy.com",
+  "reach": "dns-fail"
+ },
+ "cb_e2cb179d": {
+  "url": "https://piaoxue.co/vodshow/{cateId}--{by}-{class}--{letter}---{catePg}---{year}.html",
+  "reach": "http-403"
+ },
+ "cb_e404d109": {
+  "url": "http://ntfeiyu.com/nt/{cateId}/area/{area}/by/{by}/class/{class}/lang/{lang}/page/{catePg}/year/{year}.html",
+  "reach": "dns-fail"
+ },
+ "cb_ed356b19": {
+  "url": "https://www.jskji.com/sh/1-----------/area/{area}/by/{by}/class/{class}/id/{cateId}/page/{catePg}/year/{year}.html",
+  "reach": "http-200"
+ },
+ "cb_ef9c6ee8": {
+  "url": "https://yingqu.net/vodshow/{cateId}-{area}-{by}-{class}-{lang}-{letter}---{catePg}---{year}.html",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_effbecce": {
+  "url": "https://www.hzptec.com",
+  "reach": "conn-fail:URLError"
+ },
+ "cb_f0f5f451": {
+  "url": "https://www.mochadj.com/i/{cateId}-{catePg}.html",
+  "reach": "http-200"
+ },
+ "cb_feedf8ef": {
+  "url": "http://www.hairuiyy.com/",
+  "reach": "http-523"
+ }
+}
