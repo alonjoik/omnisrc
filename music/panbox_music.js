@@ -445,17 +445,17 @@ send(EVENT_NAMES.inited, { openDevTools: false, sources: sourceConfig })
 
 console.log('1010🎵音源 v1.0.0 已加载 —— 平台: wy/tx/kw/kg/mg')
 
-  globalThis.__IBOX_SOUND = __cap.handler;
+  globalThis.__PANBOX_SOUND = __cap.handler;
 })();
 ;(function () {
   const __cap = { handler: null };
 /**
  * @name 蜻蜓电台
- * @description iBox 内置广播电台源
+ * @description PanBox 内置广播电台源
  * @version 1.0.0
- * @author iBox Reborn
+ * @author PanBox Reborn
  */
-// ibox_qtfm.js — 蜻蜓 FM 电台（落雪扩展 action 适配器；蓝本 qtfm_ibox.js，协议零变化）
+// panbox_qtfm.js — 蜻蜓 FM 电台（落雪扩展 action 适配器；蓝本 qtfm.js，协议零变化）
 // 协议：GraphQL POST https://webbff.qtfm.cn/www {radioPage(cid,page){contents} / searchResultsPage}；
 //       详情 GET webapi.qtfm.cn/api/pc/radio/{id} → album；播放直链 lhttp-hw.qtfm.cn/live/{id}/64k.mp3
 // 扩展 action（宿主契约）：home → {class}；category → {list,page,pagecount}；search → {list}；
@@ -577,7 +577,7 @@ on(EVENT_NAMES.request, function (req) {
 send(EVENT_NAMES.inited, {
     status: true,
     sources: {
-        ibox_qtfm: {
+        panbox_qtfm: {
             name: '蜻蜓电台',
             type: 'music',
             actions: ['musicUrl', 'home', 'category', 'search', 'detail'],
@@ -586,7 +586,7 @@ send(EVENT_NAMES.inited, {
     },
 })
 
-  globalThis.__IBOX_QTFM = __cap.handler;
+  globalThis.__PANBOX_QTFM = __cap.handler;
 })();
 ;(function () {
   const __cap = { handler: null };
@@ -594,7 +594,7 @@ send(EVENT_NAMES.inited, {
  * @name 听友音乐
  * @description 听友FM音乐模块：分类/专辑/曲目/直链
  * @version 1.1.0
- * @author iBox
+ * @author PanBox
  * @homepage https://tingyou.fm
  */
 // 协议（tingyou.fm 音乐模块，tv/call 加密网关；与站点前端 JS 对齐）：
@@ -923,7 +923,7 @@ on(EVENT_NAMES.request, function (req) {
 
 send(EVENT_NAMES.inited, {
   sources: {
-    ibox_tingyou: {
+    panbox_tingyou: {
       name: '听友音乐',
       type: 'music',
       actions: ['musicUrl', 'home', 'category', 'search', 'detail', 'playlist_cats', 'playlist_list', 'playlist_detail', 'lyric'],
@@ -932,7 +932,7 @@ send(EVENT_NAMES.inited, {
   },
 })
 
-  globalThis.__IBOX_TINGYOU = __cap.handler;
+  globalThis.__PANBOX_TINGYOU = __cap.handler;
 })();
 "use strict";
 (() => {
@@ -22681,7 +22681,7 @@ function asPromise(v) {
 
 // 五平台取链模块（六音聚合，MIT © Lincoln；经 IIFE 捕获注册）
 function soundHandler() {
-  const h = globalThis.__IBOX_SOUND
+  const h = globalThis.__PANBOX_SOUND
   if (!h) throw new Error('取链模块未就绪')
   return h
 }
@@ -22699,13 +22699,13 @@ function handle(req) {
   const source = req.source
   const action = req.action
   // 内容站适配器（蜻蜓/听友）：整源路由到子模块 handler
-  if (source === 'ibox_qtfm') {
-    const h = globalThis.__IBOX_QTFM
+  if (source === 'panbox_qtfm') {
+    const h = globalThis.__PANBOX_QTFM
     if (!h) return Promise.reject(new Error('蜻蜓电台模块未就绪'))
     return asPromise(h(req))
   }
-  if (source === 'ibox_tingyou') {
-    const h = globalThis.__IBOX_TINGYOU
+  if (source === 'panbox_tingyou') {
+    const h = globalThis.__PANBOX_TINGYOU
     if (!h) return Promise.reject(new Error('听友音乐模块未就绪'))
     return asPromise(h(req))
   }
@@ -22833,8 +22833,8 @@ for (const s of FIVE) {
   }
 }
 if (IS_IBOX) {
-  declared.ibox_qtfm = { name: '蜻蜓电台', type: 'music', actions: ['musicUrl', ...BROWSE_ACTIONS], qualitys: ['128k'] }
-  declared.ibox_tingyou = { name: '听友音乐', type: 'music', actions: ['musicUrl', ...BROWSE_ACTIONS, 'detail'], qualitys: ['128k'] }
+  declared.panbox_qtfm = { name: '蜻蜓电台', type: 'music', actions: ['musicUrl', ...BROWSE_ACTIONS], qualitys: ['128k'] }
+  declared.panbox_tingyou = { name: '听友音乐', type: 'music', actions: ['musicUrl', ...BROWSE_ACTIONS, 'detail'], qualitys: ['128k'] }
 }
 
 send(EVENT_NAMES.inited, { status: true, sources: declared })

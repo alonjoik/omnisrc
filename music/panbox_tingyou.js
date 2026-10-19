@@ -328,7 +328,7 @@ on(EVENT_NAMES.request, function (req) {
 
 send(EVENT_NAMES.inited, {
   sources: {
-    ibox_tingyou: {
+    panbox_tingyou: {
       name: '听友音乐',
       type: 'music',
       actions: ['musicUrl', 'home', 'category', 'search', 'detail', 'playlist_cats', 'playlist_list', 'playlist_detail', 'lyric'],

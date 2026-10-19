@@ -50,11 +50,11 @@ TVBox sites 条目 `type:3` + `api=<模板文件URL>` + `ext=<JSON字符串>`：
 
 ```bash
 cd src-tauri
-cargo build --bin ibox-cli
+cargo build --bin panbox-cli
 # 远程 js 源（仓库 URL 直测——走 rawjs_ 缓存 + ghproxy 镜像链）
-./target/debug/ibox-cli "src:jsdrpy|https://raw.githubusercontent.com/<user>/omnisrc/main/js/maccms.js|{\"api\":\"https://cai.example/api.php/provide/vod\"}||" home
+./target/debug/panbox-cli "src:jsdrpy|https://raw.githubusercontent.com/<user>/omnisrc/main/js/maccms.js|{\"api\":\"https://cai.example/api.php/provide/vod\"}||" home
 # 爬取模板条目（ext 含 | 时用 srcfile 通道）
-./target/debug/ibox-cli "srcfile:/tmp/xbpq_one.json" home   # 文件: {"kind":"jsdrpy","api":"js://tpl/xbpq.js","ext":"{...}"}
+./target/debug/panbox-cli "srcfile:/tmp/xbpq_one.json" home   # 文件: {"kind":"jsdrpy","api":"js://tpl/xbpq.js","ext":"{...}"}
 ```
 
 跨运行时验证 = 壳 CLI 全绿 + TVBox qjs 人工标定（首批各模板至少一源在 TVBox 实跑 home/category/play）。

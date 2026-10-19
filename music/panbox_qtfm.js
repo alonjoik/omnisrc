@@ -1,10 +1,10 @@
 /**
  * @name 蜻蜓电台
- * @description iBox 内置广播电台源
+ * @description PanBox 内置广播电台源
  * @version 1.0.0
  * @author PanBox
  */
-// ibox_qtfm.js — 蜻蜓 FM 电台（落雪扩展 action 适配器；蓝本 qtfm_ibox.js，协议零变化）
+// panbox_qtfm.js — 蜻蜓 FM 电台（落雪扩展 action 适配器；蓝本 qtfm.js，协议零变化）
 // 协议：GraphQL POST https://webbff.qtfm.cn/www {radioPage(cid,page){contents} / searchResultsPage}；
 //       详情 GET webapi.qtfm.cn/api/pc/radio/{id} → album；播放直链 lhttp-hw.qtfm.cn/live/{id}/64k.mp3
 // 扩展 action（宿主契约）：home → {class}；category → {list,page,pagecount}；search → {list}；
@@ -123,7 +123,7 @@ on(EVENT_NAMES.request, function (req) {
 send(EVENT_NAMES.inited, {
     status: true,
     sources: {
-        ibox_qtfm: {
+        panbox_qtfm: {
             name: '蜻蜓电台',
             type: 'music',
             actions: ['musicUrl', 'home', 'category', 'search', 'detail'],
