@@ -1,4 +1,4 @@
-// 哔哔（B站）— api.bilibili.com（iBox appBili 五源共用：合集/少儿/小学/初中/高中）
+// 哔哔（B站）— api.bilibili.com（原版 appBili 五源共用：合集/少儿/小学/初中/高中）
 // 链路：finger/spi 取 buvid → nav 取 wbi key → wbi 签名请求（search/popular/view/playurl 匿名全通）
 // 播放：x/player/playurl?avid=&platform=html5 匿名 720P；直链必须带 Referer: https://www.bilibili.com/
 // ext = {"name":"哔哔小学","kws":["小学数学","小学语文","小学英语"]}

@@ -1,8 +1,8 @@
 /**
- * @name iBox音源
+ * @name PanBox音源
  * @description 一条链接全量音乐源：五平台(酷我/酷狗/QQ/网易/咪咕)搜索·榜单·歌词·取链 + 蜻蜓电台 + 听友音乐
  * @version 2.0.0
- * @author iBox（内核 SDK © lyswhut lx-music；取链聚合 © Lincoln 六音音源 MIT）
+ * @author PanBox（内核 SDK © lyswhut lx-music；取链聚合 © Lincoln 六音音源 MIT）
  * @homepage https://github.com/lyswhut/lx-music-mobile
  */
 /* eslint-disable */

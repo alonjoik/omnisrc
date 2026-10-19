@@ -2,7 +2,7 @@
  * @name 蜻蜓电台
  * @description iBox 内置广播电台源
  * @version 1.0.0
- * @author iBox Reborn
+ * @author PanBox
  */
 // ibox_qtfm.js — 蜻蜓 FM 电台（落雪扩展 action 适配器；蓝本 qtfm_ibox.js，协议零变化）
 // 协议：GraphQL POST https://webbff.qtfm.cn/www {radioPage(cid,page){contents} / searchResultsPage}；

@@ -165,7 +165,7 @@
     {
       "key": "xf_新秒播",
       "name": "新秒播",
-      "group": "iBox在播",
+      "group": "PanBox在播",
       "tpl": "maccms.js",
       "ext": {
         "api": "http://124.222.30.115/mb/api.php/provide/vod/"
@@ -174,7 +174,7 @@
     {
       "key": "xf_SX影视",
       "name": "SX影视",
-      "group": "iBox在播",
+      "group": "PanBox在播",
       "tpl": "maccms.js",
       "ext": {
         "api": "http://124.222.116.5/mb/mb/sxys/api.php/provide/vod/"

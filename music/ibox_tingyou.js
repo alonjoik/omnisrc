@@ -2,7 +2,7 @@
  * @name 听友音乐
  * @description 听友FM音乐模块：分类/专辑/曲目/直链
  * @version 1.1.0
- * @author iBox
+ * @author PanBox
  * @homepage https://tingyou.fm
  */
 // 协议（tingyou.fm 音乐模块，tv/call 加密网关；与站点前端 JS 对齐）：
