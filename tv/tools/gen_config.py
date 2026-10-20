@@ -26,7 +26,7 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 TV_DIR = Path(__file__).resolve().parent.parent
-DEFAULT_RAW_BASE = "https://raw.githubusercontent.com/example/omnisrc/main"
+DEFAULT_RAW_BASE = "https://raw.githubusercontent.com/alonjoik/omnisrc/main"
 
 
 def load_entries(path: Path) -> list:
