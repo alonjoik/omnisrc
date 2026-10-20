@@ -2655,6 +2655,138 @@
       "ext": {
         "api": "https://www.mdzyapi.com/api.php/provide/vod"
       }
+    },
+    {
+      "key": "dj_360",
+      "name": "360短剧",
+      "group": "短剧",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://360zyzz.com/api.php/provide/vod",
+        "cate": "46",
+        "cateName": "爽文短剧"
+      }
+    },
+    {
+      "key": "dj_uku",
+      "name": "U酷短剧",
+      "group": "短剧",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://api.ukuapi88.com/api.php/provide/vod",
+        "cate": "32",
+        "cateName": "短剧"
+      }
+    },
+    {
+      "key": "dj_zuida",
+      "name": "最大短剧",
+      "group": "短剧",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://zuida.xyz/api.php/provide/vod",
+        "cate": "69",
+        "cateName": "短剧"
+      }
+    },
+    {
+      "key": "dj_dytt",
+      "name": "电影天堂短剧",
+      "group": "短剧",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "http://caiji.dyttzyapi.com/api.php/provide/vod",
+        "cate": "36",
+        "cateName": "短剧"
+      }
+    },
+    {
+      "key": "dj_hongniu",
+      "name": "红牛短剧",
+      "group": "短剧",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://www.hongniuzy2.com/api.php/provide/vod",
+        "cate": "30&50",
+        "cateName": "短剧&擦边短剧"
+      }
+    },
+    {
+      "key": "dj_maotai",
+      "name": "茅台短剧",
+      "group": "短剧",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://caiji.maotaizy.cc/api.php/provide/vod",
+        "cate": "37&54&55",
+        "cateName": "短剧大全&AI短剧&擦边短剧"
+      }
+    },
+    {
+      "key": "dj_douban",
+      "name": "豆瓣短剧",
+      "group": "短剧",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://caiji.dbzy5.com/api.php/provide/vod",
+        "cate": "37&53&54",
+        "cateName": "短剧大全&AI短剧&擦边短剧"
+      }
+    },
+    {
+      "key": "dj_modu",
+      "name": "魔都短剧",
+      "group": "短剧",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://www.mdzyapi.com/api.php/provide/vod",
+        "cate": "38",
+        "cateName": "短剧"
+      }
+    },
+    {
+      "key": "dj_qm",
+      "name": "七猫短剧",
+      "group": "短剧",
+      "tpl": "qm.js",
+      "kind": "panboxjs"
+    },
+    {
+      "key": "dj_haokan",
+      "name": "好看短剧",
+      "group": "短剧",
+      "tpl": "haokan.js",
+      "kind": "panboxjs"
+    },
+    {
+      "key": "dj_manju_hongguo",
+      "name": "红果漫剧",
+      "group": "短剧",
+      "tpl": "manju.js",
+      "ext": {
+        "site": "hongguo"
+      },
+      "kind": "panboxjs"
+    },
+    {
+      "key": "dj_manju_qimao",
+      "name": "七猫漫剧",
+      "group": "短剧",
+      "tpl": "manju.js",
+      "ext": {
+        "site": "qimao"
+      },
+      "kind": "panboxjs"
+    },
+    {
+      "key": "dj_manju_xifan",
+      "name": "喜番短剧",
+      "group": "短剧",
+      "tpl": "manju.js",
+      "ext": {
+        "site": "xifan"
+      },
+      "kind": "panboxjs"
     }
   ]
 }

@@ -5,7 +5,7 @@
       "name": "猫眼",
       "searchable": 1,
       "type": 3,
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/maccms.js",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/maccms.js",
       "filterable": 1,
       "ext": "{\"api\": \"https://api.maoyanapi.top/api.php/provide/vod\"}"
     },
@@ -14,7 +14,7 @@
       "name": "红果短剧",
       "searchable": 1,
       "type": 3,
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/hongguo.js",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/hongguo.js",
       "filterable": 1
     },
     {
@@ -22,7 +22,7 @@
       "name": "大芒短剧",
       "searchable": 1,
       "type": 3,
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/damang.js",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/damang.js",
       "filterable": 1
     },
     {
@@ -30,7 +30,7 @@
       "name": "星芽短剧",
       "searchable": 1,
       "type": 3,
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/xingya.js",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/xingya.js",
       "filterable": 1
     },
     {
@@ -38,7 +38,7 @@
       "name": "即刻短剧（需夸克登录）",
       "searchable": 1,
       "type": 3,
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/jike.js",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/jike.js",
       "filterable": 1
     },
     {
@@ -46,7 +46,7 @@
       "name": "河马短剧",
       "searchable": 1,
       "type": 3,
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/hema.js",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/hema.js",
       "filterable": 1
     },
     {
@@ -54,7 +54,7 @@
       "name": "西饭短剧",
       "searchable": 1,
       "type": 3,
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/xifan.js",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/xifan.js",
       "filterable": 1
     },
     {
@@ -62,7 +62,7 @@
       "name": "短剧库（需夸克登录）",
       "searchable": 1,
       "type": 3,
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/djk.js",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/djk.js",
       "filterable": 1
     },
     {
@@ -70,7 +70,7 @@
       "name": "白马短剧",
       "searchable": 1,
       "type": 3,
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/baima.js",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/baima.js",
       "filterable": 1
     },
     {
@@ -78,8 +78,128 @@
       "name": "红豆短剧",
       "searchable": 1,
       "type": 3,
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/js/hongdou.js",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/hongdou.js",
       "filterable": 1
+    },
+    {
+      "key": "dj_360",
+      "name": "360短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/maccms.js",
+      "filterable": 1,
+      "ext": "{\"api\": \"https://360zyzz.com/api.php/provide/vod\", \"cate\": \"46\", \"cateName\": \"爽文短剧\"}"
+    },
+    {
+      "key": "dj_uku",
+      "name": "U酷短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/maccms.js",
+      "filterable": 1,
+      "ext": "{\"api\": \"https://api.ukuapi88.com/api.php/provide/vod\", \"cate\": \"32\", \"cateName\": \"短剧\"}"
+    },
+    {
+      "key": "dj_zuida",
+      "name": "最大短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/maccms.js",
+      "filterable": 1,
+      "ext": "{\"api\": \"https://zuida.xyz/api.php/provide/vod\", \"cate\": \"69\", \"cateName\": \"短剧\"}"
+    },
+    {
+      "key": "dj_dytt",
+      "name": "电影天堂短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/maccms.js",
+      "filterable": 1,
+      "ext": "{\"api\": \"http://caiji.dyttzyapi.com/api.php/provide/vod\", \"cate\": \"36\", \"cateName\": \"短剧\"}"
+    },
+    {
+      "key": "dj_hongniu",
+      "name": "红牛短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/maccms.js",
+      "filterable": 1,
+      "ext": "{\"api\": \"https://www.hongniuzy2.com/api.php/provide/vod\", \"cate\": \"30&50\", \"cateName\": \"短剧&擦边短剧\"}"
+    },
+    {
+      "key": "dj_maotai",
+      "name": "茅台短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/maccms.js",
+      "filterable": 1,
+      "ext": "{\"api\": \"https://caiji.maotaizy.cc/api.php/provide/vod\", \"cate\": \"37&54&55\", \"cateName\": \"短剧大全&AI短剧&擦边短剧\"}"
+    },
+    {
+      "key": "dj_douban",
+      "name": "豆瓣短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/maccms.js",
+      "filterable": 1,
+      "ext": "{\"api\": \"https://caiji.dbzy5.com/api.php/provide/vod\", \"cate\": \"37&53&54\", \"cateName\": \"短剧大全&AI短剧&擦边短剧\"}"
+    },
+    {
+      "key": "dj_modu",
+      "name": "魔都短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/maccms.js",
+      "filterable": 1,
+      "ext": "{\"api\": \"https://www.mdzyapi.com/api.php/provide/vod\", \"cate\": \"38\", \"cateName\": \"短剧\"}"
+    },
+    {
+      "key": "dj_qm",
+      "name": "七猫短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/qm.js",
+      "filterable": 1,
+      "kind": "panboxjs"
+    },
+    {
+      "key": "dj_haokan",
+      "name": "好看短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/haokan.js",
+      "filterable": 1,
+      "kind": "panboxjs"
+    },
+    {
+      "key": "dj_manju_hongguo",
+      "name": "红果漫剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/manju.js",
+      "filterable": 1,
+      "kind": "panboxjs",
+      "ext": "{\"site\": \"hongguo\"}"
+    },
+    {
+      "key": "dj_manju_qimao",
+      "name": "七猫漫剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/manju.js",
+      "filterable": 1,
+      "kind": "panboxjs",
+      "ext": "{\"site\": \"qimao\"}"
+    },
+    {
+      "key": "dj_manju_xifan",
+      "name": "喜番短剧",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/manju.js",
+      "filterable": 1,
+      "kind": "panboxjs",
+      "ext": "{\"site\": \"xifan\"}"
     }
   ]
 }

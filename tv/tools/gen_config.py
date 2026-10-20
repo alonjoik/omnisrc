@@ -26,7 +26,7 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 TV_DIR = Path(__file__).resolve().parent.parent
-DEFAULT_RAW_BASE = "https://raw.githubusercontent.com/alonjoik/omnisrc/main"
+DEFAULT_RAW_BASE = "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv"
 
 
 def load_entries(path: Path) -> list:
@@ -52,6 +52,8 @@ def entry_to_site(e: dict, raw_base: str, errors: list, ctx: str) -> dict | None
             errors.append(f"{ctx}: 模板文件 js/{tpl} 不存在")
             return None
         site.update({"type": 3, "api": f"{raw_base}/js/{tpl}", "filterable": e.get("filterable", 1)})
+        if e.get("kind"):
+            site["kind"] = e["kind"]
         ext = e.get("ext")
         if ext is not None:
             # TVBox 惯例：ext 为 JSON 字符串（qjs 源直接读 ext 参数）
