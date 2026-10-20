@@ -32,6 +32,7 @@ PanBox 壳侧 `drpy_host.js` 负责补齐对齐——**同一份源文件在壳�
 **壳增强面（仅 PanBox 内可用——必须 `typeof` 探测 + 缺失降级，导出兼容红线）**：
 
 - `__panJson`（网盘凭证中心）、`__proxyBase()`（本地代理）、`CryptoJS` 薄壳、`__aes*`/`__rsa*` 系列
+- `__hongguoApi(entry, argsJson)`（红果内置能力桥）：entry ∈ home/category/detail/search/play，argsJson 为参数数组 JSON；返回与壳内内置红果源同契约的 JSON 串（play 含本地解密流多档 `qualities`，见 `js/hongguo.js` 薄壳示例）；失败返回 `{"__err":"..."}` 需检查并降级官网明文线路
 - 用法示例：`if (typeof __panJson !== 'undefined') { ... } else { /* 降级：读 getItem 或报错 */ }`
 
 **禁用**：Node API（fs/req/puppeteer 等 drpy-node 专有）、顶层 await、async 入口、QuickJS 专有扩展。

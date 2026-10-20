@@ -163,6 +163,12 @@
       }
     },
     {
+      "key": "dj_hongguo",
+      "name": "红果短剧",
+      "group": "短剧",
+      "tpl": "hongguo.js"
+    },
+    {
       "key": "xf_新秒播",
       "name": "新秒播",
       "group": "PanBox在播",
