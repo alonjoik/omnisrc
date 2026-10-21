@@ -139,10 +139,26 @@ var rule = {
         return vod;
     },
 
-    // 直链播放（vod_play_url 已含真实地址；加密线的站靠批次5 分诊）
+    // 直链播放(vod_play_url 已含真实地址);分享页形态(dytt 系 play.phimgood.com/share、
+    // 量子系 v.lzcdn*.com/share)拉页面挖 url="/….m3u8?sign=…" 相对签名链拼接,挖不到回退原样
     lazy: function () {
         var u = this.input;
         if (u.indexOf('http') !== 0) throw new Error('maccms 非直链播放地址');
+        if (/\.(m3u8|mp4)(\?|$)/i.test(u)) return JSON.stringify({ parse: 0, url: u });
+        try {
+            var r = req(u, { headers: { 'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Mobile/15E148 Safari/604.1' } });
+            var html = String(r.content || '');
+            var m = html.match(/url\s*=\s*["']([^"']+\.m3u8[^"']*)["']/i)
+                || html.match(/["'](https?:\/\/[^"'\s]+\.m3u8[^"'\s]*)["']/i);
+            if (m) {
+                var link = m[1];
+                if (link.indexOf('http') !== 0) {
+                    var base = u.replace(/(https?:\/\/[^\/]+).*/, '$1');
+                    link = base + (link.charAt(0) === '/' ? '' : '/') + link;
+                }
+                return JSON.stringify({ parse: 0, url: link });
+            }
+        } catch (e) { }
         return JSON.stringify({ parse: 0, url: u });
     },
 }
