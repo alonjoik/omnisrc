@@ -2805,6 +2805,158 @@
       "name": "熊猫视频",
       "group": "影视",
       "tpl": "xmvideo.js"
+    },
+    {
+      "key": "cb_appv7_dsx",
+      "name": "💥师兄┃秒播💥",
+      "group": "影视",
+      "tpl": "appv7.js",
+      "ext": {
+        "config": "AppV7Dsx"
+      }
+    },
+    {
+      "key": "cb_appv7_fz",
+      "name": "💥粉猪┃秒播💥",
+      "group": "影视",
+      "tpl": "appv7.js",
+      "ext": {
+        "config": "AppV7Fz"
+      }
+    },
+    {
+      "key": "cb_appv7_xy",
+      "name": "💥咸鱼┃秒播💥",
+      "group": "影视",
+      "tpl": "appv7.js",
+      "ext": {
+        "config": "AppV7Xy"
+      }
+    },
+    {
+      "key": "cb_appv7_zjdr",
+      "name": "💥追剧┃秒播💥",
+      "group": "影视",
+      "tpl": "appv7.js",
+      "ext": {
+        "config": "AppV7Zjdr"
+      }
+    },
+    {
+      "key": "cb_appv7_mtq",
+      "name": "💥太奇┃秒播💥",
+      "group": "影视",
+      "tpl": "appv7.js",
+      "ext": {
+        "config": "AppV7Mtq"
+      }
+    },
+    {
+      "key": "cb_appv7_llq",
+      "name": "💥零七┃秒播💥",
+      "group": "影视",
+      "tpl": "appv7.js",
+      "ext": {
+        "config": "AppV7Llq"
+      }
+    },
+    {
+      "key": "cb_appv7_xhr",
+      "name": "💥黄人┃秒播💥",
+      "group": "影视",
+      "tpl": "appv7.js",
+      "ext": {
+        "config": "AppV7Xhr"
+      }
+    },
+    {
+      "key": "cb_appv7_xyz",
+      "name": "💥柚子┃秒播💥",
+      "group": "影视",
+      "tpl": "appv7.js",
+      "ext": {
+        "config": "AppV7Xyz"
+      }
+    },
+    {
+      "key": "cb_bili_1",
+      "name": "🎶明星┃MV",
+      "group": "影视",
+      "tpl": "bili.js",
+      "ext": {
+        "json": "https://nos.netease.com/ysf/5af5fbe12a88b7c45aa1c21e6551826c.txt"
+      }
+    },
+    {
+      "key": "cb_bili_2",
+      "name": "🅱哔哔合集┃弹幕",
+      "group": "影视",
+      "tpl": "bili.js",
+      "ext": {
+        "json": "https://nos.netease.com/ysf/0075389dca9afadd4614e9713765ff17.txt"
+      }
+    },
+    {
+      "key": "cb_bili_3",
+      "name": "🅱哔哔演唱会┃弹幕",
+      "group": "影视",
+      "tpl": "bili.js",
+      "ext": {
+        "json": "https://nos.netease.com/ysf/6496356286589c68f52c2f99c0c674c7.txt"
+      }
+    },
+    {
+      "key": "cb_bili_4",
+      "name": "📚高中┃课堂",
+      "group": "影视",
+      "tpl": "bili.js",
+      "ext": {
+        "json": "https://nos.netease.com/ysf/c66a4b5356141c49fd45ec51568017b4.txt"
+      }
+    },
+    {
+      "key": "cb_bili_5",
+      "name": "🅱哔哔┃合集🅱",
+      "group": "影视",
+      "tpl": "bili.js",
+      "ext": null
+    },
+    {
+      "key": "cb_bili_6",
+      "name": "🅱哔哔┃歌曲🅱",
+      "group": "影视",
+      "tpl": "bili.js",
+      "ext": null
+    },
+    {
+      "key": "cb_bili_8",
+      "name": "🅱‍哔哩┃戏曲🅱‍",
+      "group": "影视",
+      "tpl": "bili.js",
+      "ext": {
+        "json": "https://storage.7x24cc.com/storage-server/presigned/ss1/a6-online-fileupload/newMediaImage/183E562_773_xiqu_20251130182006749newMediaImage.txt"
+      }
+    },
+    {
+      "key": "cb_rebo",
+      "name": "💥热播┃秒播",
+      "group": "影视",
+      "tpl": "rebo.js",
+      "ext": null
+    },
+    {
+      "key": "cb_wex_bobo",
+      "name": "🎇波波┃秒播",
+      "group": "影视",
+      "tpl": "bobo.js",
+      "ext": {}
+    },
+    {
+      "key": "cb_wex_duboku",
+      "name": "💥独播┃秒播",
+      "group": "影视",
+      "tpl": "duboku.js",
+      "ext": {}
     }
   ]
 }
