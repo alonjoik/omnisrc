@@ -1969,6 +1969,30 @@
       "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/maccms.js",
       "filterable": 1,
       "ext": "{\"api\": \"https://www.mdzyapi.com/api.php/provide/vod\"}"
+    },
+    {
+      "key": "cb_jianpian",
+      "name": "荐片",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/jianpian.js",
+      "filterable": 1
+    },
+    {
+      "key": "cb_guazi",
+      "name": "瓜子",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/guazi.js",
+      "filterable": 1
+    },
+    {
+      "key": "cb_xmvideo",
+      "name": "熊猫视频",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/xmvideo.js",
+      "filterable": 1
     }
   ]
 }

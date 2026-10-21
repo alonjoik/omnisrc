@@ -2787,6 +2787,24 @@
         "site": "xifan"
       },
       "kind": "panboxjs"
+    },
+    {
+      "key": "cb_jianpian",
+      "name": "荐片",
+      "group": "影视",
+      "tpl": "jianpian.js"
+    },
+    {
+      "key": "cb_guazi",
+      "name": "瓜子",
+      "group": "影视",
+      "tpl": "guazi.js"
+    },
+    {
+      "key": "cb_xmvideo",
+      "name": "熊猫视频",
+      "group": "影视",
+      "tpl": "xmvideo.js"
     }
   ]
 }
