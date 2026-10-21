@@ -2170,6 +2170,15 @@
       "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/maccms.js",
       "filterable": 1,
       "ext": "{\"api\": \"https://lovedan.net/api.php/provide/vod\"}"
+    },
+    {
+      "key": "panbox_dm84",
+      "name": "动漫巴士",
+      "searchable": 1,
+      "type": 3,
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/xbpq.js",
+      "filterable": 1,
+      "ext": "{\"请求头\": \"User-Agent$Mozilla/5.0 (Linux; Android 12; Redmi K30 Pro) Chrome/120 Mobile\", \"搜索url\": \"https://dm84.tv/s----------.html?wd={wd}\", \"数组\": \"<div class=\\\"item\\\"&&</li>\", \"标题\": \"title=\\\"&&\\\"\", \"链接\": \"href=\\\"&&\\\"\", \"图片\": \"data-bg=\\\"&&\\\"\", \"副标题\": \"class=\\\"desc\\\">&&</span>\", \"影片标题\": \"在线播放\\\">&&</a>\", \"影片图片\": \"property=\\\"og:image\\\" content=\\\"&&\\\"\", \"简介\": \"name=\\\"description\\\" content=\\\"&&\\\"\", \"播放数组\": \"class=\\\"play_list\\\"&&</ul>\", \"播放列表\": \"<li&&</li>\", \"播放标题\": \"\\\">&&</a>\", \"播放链接\": \"href=\\\"&&\\\"\"}"
     }
   ]
 }
