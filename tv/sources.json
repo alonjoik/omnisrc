@@ -1064,15 +1064,6 @@
       }
     },
     {
-      "key": "cb_56186f27",
-      "name": "量子影视（TVBox·5）",
-      "group": "影视",
-      "tpl": "maccms.js",
-      "ext": {
-        "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/at/xml/"
-      }
-    },
-    {
       "key": "cb_58bc8a57",
       "name": "片吧影视（TVBox·御制(无采集)-加速）",
       "group": "影视",
@@ -1117,15 +1108,6 @@
         "分类url": "https://iuys2.cc/vodshow/{cateId}-{area}-{by}-{class}-{lang}-{letter}---{catePg}---{year}.html",
         "编码": "UTF-8",
         "请求头": "User-Agent$MOBILE_UA"
-      }
-    },
-    {
-      "key": "cb_5c4e748b",
-      "name": "非凡影视（TVBox·5）",
-      "group": "影视",
-      "tpl": "maccms.js",
-      "ext": {
-        "api": "https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/at/xml/"
       }
     },
     {
@@ -1571,15 +1553,6 @@
       }
     },
     {
-      "key": "cb_933d696e",
-      "name": "🐝非凡资源（TVBox·直播）",
-      "group": "影视",
-      "tpl": "maccms.js",
-      "ext": {
-        "api": "http://cj.ffzyapi.com/api.php/provide/vod/?ac=list"
-      }
-    },
-    {
       "key": "cb_98877afe",
       "name": "影视 • 建安（TVBox·vv）",
       "group": "影视",
@@ -1855,15 +1828,6 @@
       "group": "少儿",
       "tpl": "xyqh.js",
       "ext": "https://ghproxy.net/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQHiker/%E5%85%94%E5%B0%8F%E8%B4%9D.json"
-    },
-    {
-      "key": "cb_b1707adc",
-      "name": "暴风影视（TVBox·5）",
-      "group": "影视",
-      "tpl": "maccms.js",
-      "ext": {
-        "api": "http://by.bfzyapi.com/api.php/provide/vod/at/xml"
-      }
     },
     {
       "key": "cb_b3e4c2ed",
@@ -2957,6 +2921,60 @@
       "group": "影视",
       "tpl": "duboku.js",
       "ext": {}
+    },
+    {
+      "key": "app_appCaiBaoFeng",
+      "name": "暴风",
+      "group": "影视",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://bfzyapi.com/api.php/provide/vod/"
+      }
+    },
+    {
+      "key": "app_ciji360",
+      "name": "十八",
+      "group": "影视",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://360zyzz.com/api.php/provide/vod/"
+      }
+    },
+    {
+      "key": "app_caijiEzdi",
+      "name": "大强",
+      "group": "影视",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://dd.jzcbed.xyz/api.php/provide/vod/"
+      }
+    },
+    {
+      "key": "app_cjyz",
+      "name": "优质",
+      "group": "影视",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://api.yyzy-tv.vip/inc/apijson.php/"
+      }
+    },
+    {
+      "key": "app_ruyi",
+      "name": "如意",
+      "group": "影视",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://cj.rytvapi.com/api.php/provide/vod/from/rym3u8/"
+      }
+    },
+    {
+      "key": "s_艾旦",
+      "name": "艾旦",
+      "group": "影视",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://lovedan.net/api.php/provide/vod"
+      }
     }
   ]
 }

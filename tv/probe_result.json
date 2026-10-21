@@ -35,6 +35,13 @@
     "err": "无数据api(模板硬编码)"
   },
   {
+    "key": "app_appCaiBaoFeng",
+    "api": "https://bfzyapi.com/api.php/provide/vod/",
+    "status": "alive",
+    "ms": 733,
+    "err": ""
+  },
+  {
     "key": "app_caiJiWGV2",
     "api": "",
     "status": "skipped",
@@ -42,11 +49,39 @@
     "err": "无数据api(模板硬编码)"
   },
   {
+    "key": "app_caijiEzdi",
+    "api": "https://dd.jzcbed.xyz/api.php/provide/vod/",
+    "status": "alive",
+    "ms": 1030,
+    "err": ""
+  },
+  {
+    "key": "app_ciji360",
+    "api": "https://360zyzz.com/api.php/provide/vod/",
+    "status": "alive",
+    "ms": 703,
+    "err": ""
+  },
+  {
+    "key": "app_cjyz",
+    "api": "https://api.yyzy-tv.vip/inc/apijson.php/",
+    "status": "alive",
+    "ms": 937,
+    "err": ""
+  },
+  {
     "key": "app_gugufan",
     "api": "",
     "status": "skipped",
     "ms": 0,
     "err": "无数据api(模板硬编码)"
+  },
+  {
+    "key": "app_ruyi",
+    "api": "https://cj.rytvapi.com/api.php/provide/vod/from/rym3u8/",
+    "status": "alive",
+    "ms": 1092,
+    "err": ""
   },
   {
     "key": "app_skKanKe",
@@ -101,862 +136,841 @@
     "key": "cb_013ddf07",
     "api": "https://dyxz.tv/list/1_1.html",
     "status": "unknown",
-    "ms": 1171,
+    "ms": 593,
     "err": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid f(反爬疑似)"
   },
   {
     "key": "cb_0635c664",
     "api": "https://85k.ltd//index.php/vod/show/area/1/by/1/class/1/id/1/lang/1/page/1/year/1/",
     "status": "unknown",
-    "ms": 2109,
+    "ms": 1296,
     "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_0808f9b9",
     "api": "https://mi2ys.com/vodshow/1-1-1-1-1-1---1---1.html",
     "status": "unknown",
-    "ms": 1641,
+    "ms": 1359,
     "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_083dac97",
     "api": "https://jav.sb/",
     "status": "alive",
-    "ms": 1828,
+    "ms": 453,
     "err": ""
   },
   {
     "key": "cb_09282932",
     "api": "https://api.souavzy.vip/api.php/provide/vod/at/json",
     "status": "alive",
-    "ms": 1592,
+    "ms": 891,
     "err": ""
   },
   {
     "key": "cb_0ff97120",
     "api": "https://www.kqyy.tv/vodshow/area/1/class/1/id/1/page/1/year/1.html",
     "status": "unknown",
-    "ms": 1703,
+    "ms": 1250,
     "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_10662451",
     "api": "https://caiji.kuaichezy.org/api.php/provide/vod/?ac=list",
     "status": "alive",
-    "ms": 1562,
+    "ms": 657,
     "err": ""
   },
   {
     "key": "cb_12233370",
     "api": "https://api.heiapi.cc/api.php/provide/vod/",
     "status": "alive",
-    "ms": 1844,
+    "ms": 860,
     "err": ""
   },
   {
     "key": "cb_13c4c84c",
     "api": "https://cj.rycjapi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2219,
+    "ms": 1046,
     "err": ""
   },
   {
     "key": "cb_16a6764c",
     "api": "https://v.aiwule.com/vodshow/1-1-1-1-1-1---1---1.html",
     "status": "unknown",
-    "ms": 1155,
+    "ms": 359,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_18566e6d",
     "api": "http://zhangqun1818.serv00.net/cj/cjjh.php?ac=list",
-    "status": "dead",
-    "ms": 1485,
-    "err": "HTTP 502"
+    "status": "alive",
+    "ms": 1468,
+    "err": ""
   },
   {
     "key": "cb_18953cf6",
     "api": "https://www.777mmx.com/yazhouxingai/index.html",
     "status": "alive",
-    "ms": 4218,
+    "ms": 3546,
     "err": ""
   },
   {
     "key": "cb_18b905b9",
     "api": "https://jkunzyapi.com/api.php/provide/vod/at/json",
     "status": "alive",
-    "ms": 1547,
+    "ms": 532,
     "err": ""
   },
   {
     "key": "cb_1a985894",
     "api": "https://dmbus.cc/show-1--1-1--1-1.html",
     "status": "alive",
-    "ms": 2077,
+    "ms": 1483,
     "err": ""
   },
   {
     "key": "cb_1b506256",
     "api": "https://www.1234y.cc",
     "status": "unknown",
-    "ms": 8062,
+    "ms": 8046,
     "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
   },
   {
     "key": "cb_1b5b3f91",
     "api": "https://api.souavzyw.net/api.php/provide/vod/",
     "status": "alive",
-    "ms": 1719,
+    "ms": 609,
     "err": ""
   },
   {
     "key": "cb_1cc7d92b",
     "api": "https://www.dsxysproo.com/",
     "status": "alive",
-    "ms": 3344,
+    "ms": 1875,
     "err": ""
   },
   {
     "key": "cb_1f0e3dad",
     "api": "https://19q.cc/api.php/provide/vod",
     "status": "alive",
-    "ms": 1530,
+    "ms": 1312,
     "err": ""
   },
   {
     "key": "cb_201f20a0",
     "api": "https://api.souavzy.vip/api.php/provide/vod/?ac=list",
     "status": "alive",
-    "ms": 1282,
+    "ms": 765,
     "err": ""
   },
   {
     "key": "cb_23d0c5f0",
     "api": "https://www.tl39.com/",
     "status": "alive",
-    "ms": 2594,
+    "ms": 1500,
     "err": ""
   },
   {
     "key": "cb_23f0f64d",
     "api": "https://api.ukuapi.com/api.php/provide/vod/?ac=list",
     "status": "alive",
-    "ms": 2437,
+    "ms": 827,
     "err": ""
   },
   {
     "key": "cb_24afd280",
     "api": "https://lbapi9.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 1359,
+    "ms": 532,
     "err": ""
   },
   {
     "key": "cb_2529ca9e",
     "api": "https://api.ukuapi88.com/api.php/provide/vod/at/xmlsea",
     "status": "alive",
-    "ms": 1155,
+    "ms": 483,
     "err": ""
   },
   {
     "key": "cb_25398b84",
     "api": "https://thzy1.me/api.php/provide/vod/?ac=list",
     "status": "alive",
-    "ms": 3030,
+    "ms": 2250,
     "err": ""
   },
   {
     "key": "cb_26480d70",
     "api": "https://api.wujinapi.cc/api.php/provide/vod",
     "status": "alive",
-    "ms": 1390,
+    "ms": 734,
     "err": ""
   },
   {
     "key": "cb_26916fd7",
     "api": "https://www.nycvod.com/vodshow/1-1-1-1-1-1---1---1.html",
     "status": "unknown",
-    "ms": 1610,
+    "ms": 1297,
     "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_29eeb04d",
     "api": "https://vnzyz.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 3140,
+    "ms": 796,
     "err": ""
   },
   {
     "key": "cb_2a31c617",
     "api": "https://fqzy.me//api.php/provide/vod/",
     "status": "alive",
-    "ms": 5125,
+    "ms": 1796,
     "err": ""
   },
   {
     "key": "cb_30a23716",
     "api": "https://api.xjzyapi.com/provide/vod",
     "status": "alive",
-    "ms": 3217,
+    "ms": 1202,
     "err": ""
   },
   {
     "key": "cb_373066f2",
     "api": "https://cj.yayazy.net/api.php/provide/vod",
     "status": "alive",
-    "ms": 1469,
+    "ms": 640,
     "err": ""
   },
   {
     "key": "cb_399485bb",
     "api": "http://plbzt.com/lists/1/area/1/by/1/class/1/id/1/page/1/year/1.html",
     "status": "dead",
-    "ms": 8016,
+    "ms": 8062,
     "err": "timed out"
   },
   {
     "key": "cb_3a3a0103",
     "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/at/xml/",
     "status": "alive",
-    "ms": 1828,
+    "ms": 969,
     "err": ""
   },
   {
     "key": "cb_3c387ec6",
     "api": "http://ffzy5.tv/api.php/provide/vod",
     "status": "alive",
-    "ms": 1000,
+    "ms": 516,
     "err": ""
   },
   {
     "key": "cb_3cd3daa1",
     "api": "https://www.kanyingw.com/",
     "status": "alive",
-    "ms": 4141,
+    "ms": 1125,
     "err": ""
   },
   {
     "key": "cb_3edbda52",
     "api": "http://api.11bat.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 2015,
+    "ms": 812,
     "err": ""
   },
   {
     "key": "cb_43370df7",
     "api": "https://zjuba.vip/index.php/vod/show/id/1/page/1.html",
     "status": "unknown",
-    "ms": 8046,
+    "ms": 8062,
     "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
   },
   {
     "key": "cb_435c81c5",
     "api": "https://caiji.maotaizy.cc/api.php/provide/vod/at/josn/",
     "status": "alive",
-    "ms": 3703,
+    "ms": 1594,
     "err": ""
   },
   {
     "key": "cb_436f3b01",
     "api": "https://apiyutu.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 2766,
+    "ms": 625,
     "err": ""
   },
   {
     "key": "cb_44726842",
     "api": "https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/at/json/",
     "status": "alive",
-    "ms": 3360,
+    "ms": 2047,
     "err": ""
   },
   {
     "key": "cb_449ba63b",
     "api": "https://caiji.dbzy5.com/api.php/provide/vod/from/dbm3u8/at/xml/",
     "status": "alive",
-    "ms": 4467,
+    "ms": 1625,
     "err": ""
   },
   {
     "key": "cb_44df5b7e",
     "api": "https://www.hitv.app/",
     "status": "unknown",
-    "ms": 2796,
+    "ms": 750,
     "err": "<urlopen error [SSL: TLSV1_UNRECOGNIZED_NAME] tlsv1 unrecognized name (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_453d4d4f",
     "api": "https://www.jingpinx.com//api.php/provide/vod/",
     "status": "alive",
-    "ms": 3891,
+    "ms": 2312,
     "err": ""
   },
   {
     "key": "cb_480188a4",
     "api": "https://api.1080zyku.com/inc/apijson.php",
     "status": "alive",
-    "ms": 2703,
+    "ms": 1217,
     "err": ""
   },
   {
     "key": "cb_4978da61",
     "api": "https://www.pkcom.cc/vodshow/1-----------/area/1/by/1/class/1/id/1/page/1/year/1.html",
     "status": "unknown",
-    "ms": 2281,
+    "ms": 608,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_4bf146e1",
     "api": "https://lbapi9.com/api.php/provide/vod/at/xml/",
     "status": "alive",
-    "ms": 2109,
+    "ms": 687,
     "err": ""
   },
   {
     "key": "cb_4dda8434",
     "api": "https://www.dyyz1.app/vodshow/1-1--1-----1---1.html",
     "status": "unknown",
-    "ms": 8062,
+    "ms": 8046,
     "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
   },
   {
     "key": "cb_4e596234",
     "api": "https://vip1280.net/frim/1/area/1/by/1/lang/1/letter/1/page/1/year/1.html;;x",
     "status": "unknown",
-    "ms": 3719,
+    "ms": 4016,
     "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_4e69ed52",
     "api": "https://suoniapi.com/api.php/provide/vod/at/xml/",
     "status": "alive",
-    "ms": 1891,
+    "ms": 717,
     "err": ""
   },
   {
     "key": "cb_4ee37d77",
     "api": "https://ghproxy.net/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQHiker/%E5%86%9C%E6%B0%91%E5%BD%B1%E8%A7%86.json",
     "status": "unknown",
-    "ms": 4046,
+    "ms": 1733,
     "err": "github 直连受限"
   },
   {
     "key": "cb_51167643",
     "api": "http://ffzy1.tv/api.php/provide/vod/",
     "status": "alive",
-    "ms": 1702,
+    "ms": 687,
     "err": ""
   },
   {
     "key": "cb_5201771b",
     "api": "https://www.msnii.com/api/xml.php",
     "status": "alive",
-    "ms": 2327,
+    "ms": 1032,
     "err": ""
   },
   {
     "key": "cb_534ac75c",
     "api": "https://ckzy.me/api.php/provide/vod/",
     "status": "alive",
-    "ms": 1937,
+    "ms": 922,
     "err": ""
   },
   {
     "key": "cb_53935da1",
     "api": "https://www.ikanbd.com/s/1-1-1------1---1.html",
     "status": "unknown",
-    "ms": 2092,
+    "ms": 546,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_54229abf",
     "api": "https://91av.cyou/api.php/provide/vod",
     "status": "alive",
-    "ms": 2842,
+    "ms": 1625,
     "err": ""
   },
   {
     "key": "cb_55ee5b7e",
     "api": "https://api.yzzy-api.com/inc/api.php/provide/vod/at/xml",
     "status": "alive",
-    "ms": 3233,
-    "err": ""
-  },
-  {
-    "key": "cb_56186f27",
-    "api": "https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/at/xml/",
-    "status": "alive",
-    "ms": 2155,
+    "ms": 1157,
     "err": ""
   },
   {
     "key": "cb_58bc8a57",
     "api": "https://www.ipianba.com/class/1-1-1--1----1---1.html",
     "status": "alive",
-    "ms": 4453,
+    "ms": 3516,
     "err": ""
   },
   {
     "key": "cb_58c6ebe9",
     "api": "https://www.tonglicable.com",
     "status": "unknown",
-    "ms": 3171,
+    "ms": 1593,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_5b1762cb",
     "api": "https://iuys2.cc/vodshow/1-1-1-1-1-1---1---1.html",
     "status": "alive",
-    "ms": 1671,
-    "err": ""
-  },
-  {
-    "key": "cb_5c4e748b",
-    "api": "https://api.ffzyapi.com/api.php/provide/vod/from/ffm3u8/at/xml/",
-    "status": "alive",
-    "ms": 2719,
+    "ms": 577,
     "err": ""
   },
   {
     "key": "cb_5ed24614",
     "api": "https://155api.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 1562,
+    "ms": 562,
     "err": ""
   },
   {
     "key": "cb_5f517d4d",
     "api": "https://www.iidie.com/type-1-1/",
     "status": "unknown",
-    "ms": 8062,
+    "ms": 8077,
     "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
   },
   {
     "key": "cb_5f61ff02",
     "api": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/at/josn",
     "status": "alive",
-    "ms": 4453,
+    "ms": 2702,
     "err": ""
   },
   {
     "key": "cb_603248b2",
     "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/json/",
     "status": "alive",
-    "ms": 2233,
+    "ms": 1592,
     "err": ""
   },
   {
     "key": "cb_61fc2948",
     "api": "https://www.moduzy.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2391,
+    "ms": 1172,
     "err": ""
   },
   {
     "key": "cb_62a3c7ee",
     "api": "https://api.xinlangapi.com/xinlangapi.php/provide/vod/",
     "status": "alive",
-    "ms": 1483,
+    "ms": 765,
     "err": ""
   },
   {
     "key": "cb_62d20691",
     "api": "http://tyyszy.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 1359,
+    "ms": 516,
     "err": ""
   },
   {
     "key": "cb_62e668e8",
     "api": "https://suoniapi.com/api.php/provide/vod/?ac=list",
     "status": "alive",
-    "ms": 1485,
+    "ms": 389,
     "err": ""
   },
   {
     "key": "cb_63050aab",
     "api": "https://subocaiji.com/api.php/provide/vod/from/subyun/at/json",
     "status": "alive",
-    "ms": 1483,
+    "ms": 625,
     "err": ""
   },
   {
     "key": "cb_64f6cfe0",
     "api": "https://www.budaichuchen.net/label/qq.html",
     "status": "unknown",
-    "ms": 8047,
+    "ms": 8078,
     "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
   },
   {
     "key": "cb_64fe2c89",
     "api": "https://jszyapi.com/api.php/provide/vod/at/json",
     "status": "alive",
-    "ms": 1187,
+    "ms": 812,
     "err": ""
   },
   {
     "key": "cb_68a4ce57",
     "api": "http://www.lxsgsy.com/search.php?page=1&searchtype=5&order=1&tid=1&area=1&year=1&letter=&yuyan=&state=&money=&ver=&jq=[]",
     "status": "dead",
-    "ms": 9094,
+    "ms": 6155,
     "err": "HTTP 408"
   },
   {
     "key": "cb_6c51bdbd",
     "api": "https://suoniapi.com/api.php/provide/vod/from/snm3u8/",
     "status": "alive",
-    "ms": 1735,
+    "ms": 359,
     "err": ""
   },
   {
     "key": "cb_6d0a79ee",
     "api": "https://ghproxy.net/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQHiker/%E5%85%94%E5%B0%8F%E8%B4%9D2.json",
     "status": "unknown",
-    "ms": 3141,
+    "ms": 1531,
     "err": "github 直连受限"
   },
   {
     "key": "cb_73838497",
     "api": "https://api.wsyzy.net/api.php/provide/vod",
     "status": "alive",
-    "ms": 2125,
+    "ms": 750,
     "err": ""
   },
   {
     "key": "cb_75255357",
     "api": "https://www.qpgyy5.net/type/1/area/1/by/1/class/1/id/1/page/1/year/1.html",
     "status": "alive",
-    "ms": 2734,
+    "ms": 546,
     "err": ""
   },
   {
     "key": "cb_75508200",
     "api": "https://www.xgitv.com/vodtype/1-1.html",
     "status": "unknown",
-    "ms": 5453,
+    "ms": 1625,
     "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_76e80e76",
     "api": "https://api.niuniuzy.me/api.php/provide/vod/from/nnm3u8/at/json",
     "status": "alive",
-    "ms": 3032,
+    "ms": 907,
     "err": ""
   },
   {
     "key": "cb_7770e8bf",
     "api": "https://api.ukuapi88.com/api.php/provide/vod/from/ukm3u8/at/xml",
     "status": "alive",
-    "ms": 2702,
+    "ms": 484,
     "err": ""
   },
   {
     "key": "cb_7ab2200d",
     "api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/",
     "status": "alive",
-    "ms": 2750,
+    "ms": 546,
     "err": ""
   },
   {
     "key": "cb_7bc3306e",
     "api": "https://m.yncmfs.com/",
     "status": "dead",
-    "ms": 2780,
+    "ms": 1172,
     "err": "HTTP 408"
   },
   {
     "key": "cb_7dc597af",
     "api": "https://api.niuniuzy.me/api.php/provide/vod/at/xml",
     "status": "alive",
-    "ms": 2562,
+    "ms": 515,
     "err": ""
   },
   {
     "key": "cb_7dfcd48d",
     "api": "https://lbapi9.com/api.php/provide/vod/at/json",
     "status": "alive",
-    "ms": 2437,
+    "ms": 671,
     "err": ""
   },
   {
     "key": "cb_7f54ac46",
     "api": "https://www.hanpian.tv/so/1/1-1--1----1---1/",
     "status": "alive",
-    "ms": 3609,
+    "ms": 1546,
     "err": ""
   },
   {
     "key": "cb_7f965c09",
     "api": "https://www.daquan9.cc/dqshow/1-1-1-1-1-1---1---1.html",
     "status": "alive",
-    "ms": 2032,
+    "ms": 500,
     "err": ""
   },
   {
     "key": "cb_80f9e779",
     "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/at/json",
     "status": "alive",
-    "ms": 1937,
+    "ms": 500,
     "err": ""
   },
   {
     "key": "cb_822183cc",
     "api": "https://api.wujinapi.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 1859,
+    "ms": 608,
     "err": ""
   },
   {
     "key": "cb_824dfd7e",
     "api": "https://caiji.maotaizy.cc/api.php/provide/vod/from/mtm3u8/at/json",
     "status": "alive",
-    "ms": 3875,
+    "ms": 2469,
     "err": ""
   },
   {
     "key": "cb_8600fb3f",
     "api": "http://zhangqun1818.serv00.net/zh/2242.php",
-    "status": "dead",
-    "ms": 1406,
-    "err": "HTTP 502"
+    "status": "alive",
+    "ms": 5983,
+    "err": ""
   },
   {
     "key": "cb_867a44f2",
     "api": "https://www.xingkong123.com/xkshow/1-----------1.html",
     "status": "unknown",
-    "ms": 2671,
+    "ms": 453,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_86f13903",
     "api": "https://aosikazy4.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 3141,
+    "ms": 1234,
     "err": ""
   },
   {
     "key": "cb_8bf9ee06",
     "api": "http://m.u77.net/",
     "status": "alive",
-    "ms": 1140,
+    "ms": 547,
     "err": ""
   },
   {
     "key": "cb_8ef89f1a",
     "api": "https://api.maoyanapi.top/api.php/provide/vod/from/mym3u8/at/json",
     "status": "alive",
-    "ms": 1766,
+    "ms": 562,
     "err": ""
   },
   {
     "key": "cb_903a0ca7",
     "api": "https://hsckzy888.com/api.php/provide/vod/from/hsckm3u8/at/json",
     "status": "alive",
-    "ms": 1780,
+    "ms": 703,
     "err": ""
   },
   {
     "key": "cb_90989c4f",
     "api": "https://silidm.com/",
     "status": "unknown",
-    "ms": 1640,
+    "ms": 375,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_90f259bf",
     "api": "https://778012.xyz/",
     "status": "alive",
-    "ms": 2890,
+    "ms": 1250,
     "err": ""
   },
   {
     "key": "cb_912571b7",
     "api": "https://api.niuniuzy.me/api.php/provide/vod/",
     "status": "alive",
-    "ms": 2187,
+    "ms": 655,
     "err": ""
   },
   {
     "key": "cb_91d9cf95",
     "api": "https://www.kxgav.com/api/xml.php",
     "status": "alive",
-    "ms": 2531,
-    "err": ""
-  },
-  {
-    "key": "cb_933d696e",
-    "api": "http://cj.ffzyapi.com/api.php/provide/vod/?ac=list",
-    "status": "alive",
-    "ms": 1765,
+    "ms": 859,
     "err": ""
   },
   {
     "key": "cb_98877afe",
     "api": "http://154.219.117.232:9981/jacloudapi.php/provide/vod",
     "status": "alive",
-    "ms": 2000,
+    "ms": 342,
     "err": ""
   },
   {
     "key": "cb_98b72b3a",
     "api": "https://xxavs.com/api.php/provide/vod/at/json",
     "status": "alive",
-    "ms": 2562,
+    "ms": 1375,
     "err": ""
   },
   {
     "key": "cb_9b298562",
     "api": "https://www.ncshdxx.com/",
     "status": "unknown",
-    "ms": 2233,
+    "ms": 1016,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_9d8ec026",
     "api": "https://jipinvip.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 2078,
+    "ms": 1046,
     "err": ""
   },
   {
     "key": "cb_9f51076f",
     "api": "https://api.douapi.cc/api.php/provide/vod/",
     "status": "alive",
-    "ms": 1937,
+    "ms": 812,
     "err": ""
   },
   {
     "key": "cb_a05c96fd",
     "api": "https://jyzyapi.com/provide/vod/",
     "status": "alive",
-    "ms": 2155,
+    "ms": 467,
     "err": ""
   },
   {
     "key": "cb_a120f8e1",
     "api": "https://www.airpurging.com/vod/show/area/1/by/1/class/1/id/1/letter/1/page/1/year/1.html",
     "status": "unknown",
-    "ms": 4296,
+    "ms": 2094,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_a1c34aa3",
     "api": "https://www.gdlsp.com/api/xml.php",
     "status": "alive",
-    "ms": 1655,
+    "ms": 797,
     "err": ""
   },
   {
     "key": "cb_a3f4a5b0",
     "api": "https://api.apibdzy.com/api.php/provide/vod?ac=list",
     "status": "alive",
-    "ms": 1750,
+    "ms": 687,
     "err": ""
   },
   {
     "key": "cb_a46a323e",
     "api": "https://www.jingpinx.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 3515,
+    "ms": 2141,
     "err": ""
   },
   {
     "key": "cb_a4cdf5a5",
     "api": "https://www.movie02.com/",
     "status": "alive",
-    "ms": 2046,
+    "ms": 812,
     "err": ""
   },
   {
     "key": "cb_a74aadec",
     "api": "https://m.yingmeng.net/",
     "status": "alive",
-    "ms": 1796,
+    "ms": 953,
     "err": ""
   },
   {
     "key": "cb_a750c6da",
     "api": "https://hhzyapi.com/api.php/provide/vod/at/json",
     "status": "alive",
-    "ms": 1296,
+    "ms": 453,
     "err": ""
   },
   {
     "key": "cb_a8b338e2",
     "api": "https://91md.me/api.php/provide/vod/",
     "status": "alive",
-    "ms": 2406,
+    "ms": 891,
     "err": ""
   },
   {
     "key": "cb_a92e4f4a",
     "api": "https://www.kmeiju.com/Show/1--1-1-----1---1.html",
     "status": "alive",
-    "ms": 1671,
+    "ms": 577,
     "err": ""
   },
   {
     "key": "cb_a9cf592d",
     "api": "https://shayuapi.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 1905,
+    "ms": 875,
     "err": ""
   },
   {
     "key": "cb_a9e59fa1",
     "api": "http://zhangqun1818.serv00.net/zh/2243.php",
-    "status": "dead",
-    "ms": 1452,
-    "err": "HTTP 502"
+    "status": "alive",
+    "ms": 797,
+    "err": ""
   },
   {
     "key": "cb_aa2c9140",
     "api": "https://www.926dy.com/1",
     "status": "unknown",
-    "ms": 1157,
+    "ms": 717,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_aa51c9e4",
     "api": "http://114bate.com/hdshow/1-1-1-1-1----1---1.html",
     "status": "unknown",
-    "ms": 1125,
+    "ms": 625,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_ade863ef",
     "api": "https://cn.agekkkk.com/",
     "status": "alive",
-    "ms": 1750,
+    "ms": 5062,
     "err": ""
   },
   {
     "key": "cb_ae4be06d",
     "api": "https://apilsbzy1.com/api.php/provide/vod/at/json",
     "status": "alive",
-    "ms": 2780,
+    "ms": 516,
     "err": ""
   },
   {
     "key": "cb_ae65ccf8",
     "api": "https://jiongciyuan.org/index.php/vod/show/area/1/by/1/class/1/id/1/lang/1/letter/1/page/1/year/1.html",
     "status": "unknown",
-    "ms": 3953,
+    "ms": 1547,
     "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_af060a67",
     "api": "https://www.iysdq.cc/vodshow/1-----------1.html",
     "status": "unknown",
-    "ms": 8062,
+    "ms": 8046,
     "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
   },
   {
     "key": "cb_anime_modu",
     "api": "https://www.mdzyapi.com/api.php/provide/vod",
-    "status": "dead",
-    "ms": 5078,
-    "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+    "status": "alive",
+    "ms": 891,
+    "err": ""
   },
   {
     "key": "cb_appv7_dsx",
@@ -1018,112 +1032,105 @@
     "key": "cb_b15a39f7",
     "api": "https://ghproxy.net/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQHiker/%E5%85%94%E5%B0%8F%E8%B4%9D.json",
     "status": "unknown",
-    "ms": 2343,
+    "ms": 1766,
     "err": "github 直连受限"
-  },
-  {
-    "key": "cb_b1707adc",
-    "api": "http://by.bfzyapi.com/api.php/provide/vod/at/xml",
-    "status": "alive",
-    "ms": 921,
-    "err": ""
   },
   {
     "key": "cb_b3e4c2ed",
     "api": "http://api.okzyw.net/api.php/provide/vod/from/okm3u8/at/xml",
     "status": "alive",
-    "ms": 1625,
+    "ms": 842,
     "err": ""
   },
   {
     "key": "cb_b403a92f",
     "api": "https://api.wujinapi.net/api.php/provide/vod",
     "status": "alive",
-    "ms": 3625,
+    "ms": 717,
     "err": ""
   },
   {
     "key": "cb_b44abe7a",
     "api": "http://www.afasu.com/api/xml.php",
     "status": "alive",
-    "ms": 1796,
+    "ms": 577,
     "err": ""
   },
   {
     "key": "cb_b54268b6",
     "api": "https://tyyszyapi.com/api.php/provide/vod/at/?ac=list",
     "status": "alive",
-    "ms": 4014,
+    "ms": 766,
     "err": ""
   },
   {
     "key": "cb_b552bd1d",
     "api": "https://api.ddapi.cc/api.php/provide/vod/at/json",
     "status": "alive",
-    "ms": 1657,
+    "ms": 858,
     "err": ""
   },
   {
     "key": "cb_b6abbb95",
     "api": "https://zrys1.icu/index.php/vod/show/area/1/by/1/id/1/letter/1/page/1/year/1/",
     "status": "alive",
-    "ms": 4983,
+    "ms": 4593,
     "err": ""
   },
   {
     "key": "cb_b6cab277",
     "api": "https://honghuli.com/leibiao/1-1--1-----1---1.html",
     "status": "unknown",
-    "ms": 8046,
+    "ms": 8030,
     "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
   },
   {
     "key": "cb_b7bda175",
     "api": "https://taiquantv.com/search.php?page=1&searchtype=5&order=1&area=1&year=1&letter=1&yuyan=1&money=&ver=&jq=&tid=1",
     "status": "unknown",
-    "ms": 1969,
+    "ms": 437,
     "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_b807b3f8",
     "api": "https://wzznl.buzz/search.php?page=1&searchtype=5&order=1&tid=1&area=1&year=1&letter=&yuyan=1&state=&money=&ver=&jq=",
     "status": "unknown",
-    "ms": 2078,
+    "ms": 1250,
     "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_b8ed7175",
     "api": "https://www.heiliaozyapi.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 2453,
+    "ms": 766,
     "err": ""
   },
   {
     "key": "cb_b9af3fd5",
     "api": "https://caiji.xgzyapi.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 2859,
+    "ms": 937,
     "err": ""
   },
   {
     "key": "cb_be8cbd17",
     "api": "https://ikunzyapi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2157,
+    "ms": 547,
     "err": ""
   },
   {
     "key": "cb_bed592f5",
     "api": "https://www.ddzw.cn/vodshow/1-1--1-----1---1.html",
     "status": "unknown",
-    "ms": 265,
+    "ms": 233,
     "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_bfb9a143",
     "api": "https://www.sh-bridge.com/screen/1-1-1-1-1-1---1---1.html",
     "status": "dead",
-    "ms": 5907,
+    "ms": 1422,
     "err": "HTTP 523"
   },
   {
@@ -1179,330 +1186,330 @@
     "key": "cb_c151b607",
     "api": "https://www.qyzf88.com/qyvodshow/1-1-1-1-----1---1.html",
     "status": "unknown",
-    "ms": 1953,
+    "ms": 359,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_c1c1e6e6",
     "api": "https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/at/json",
     "status": "alive",
-    "ms": 3171,
+    "ms": 625,
     "err": ""
   },
   {
     "key": "cb_c264b4e5",
     "api": "https://www.midianshi.com/",
     "status": "unknown",
-    "ms": 1953,
+    "ms": 437,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_c2bd268d",
     "api": "https://www.jinman6.com/index.php/vod/show/id/1/area/1/by/1/class/1/page/1/year/1.html",
     "status": "unknown",
-    "ms": 8062,
+    "ms": 9109,
     "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
   },
   {
     "key": "cb_c451a853",
     "api": "https://fofoyy.tv/vodshow/1-1-1-1--1---1---1.html",
     "status": "unknown",
-    "ms": 8046,
+    "ms": 8047,
     "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
   },
   {
     "key": "cb_c4f00885",
     "api": "http://bf.xoxowin86cisyap.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 1875,
+    "ms": 1030,
     "err": ""
   },
   {
     "key": "cb_c94971f8",
     "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/josn/",
     "status": "alive",
-    "ms": 3608,
+    "ms": 1717,
     "err": ""
   },
   {
     "key": "cb_ca9297f7",
     "api": "https://www.mgtv.fun/index.php/vod/show/id/1/area/1/by/1/class/1/page/1/year/1.html",
     "status": "unknown",
-    "ms": 1641,
+    "ms": 1296,
     "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_cb27110a",
     "api": "https://api.huosuapi.cc/api.php/provide/vod/",
     "status": "alive",
-    "ms": 3421,
+    "ms": 1109,
     "err": ""
   },
   {
     "key": "cb_cb7ecd03",
     "api": "https://api.guangsuapi.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 2187,
+    "ms": 594,
     "err": ""
   },
   {
     "key": "cb_ce2f1b8a",
     "api": "https://apidanaizi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 1907,
+    "ms": 1281,
     "err": ""
   },
   {
     "key": "cb_d04d5b3e",
     "api": "http://fhapi9.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 1171,
+    "ms": 797,
     "err": ""
   },
   {
     "key": "cb_d165aed6",
     "api": "https://ikunzyapi.com/api.php/provide/vod/at/xml",
     "status": "alive",
-    "ms": 1687,
+    "ms": 859,
     "err": ""
   },
   {
     "key": "cb_d18394c8",
     "api": "https://www.guipian365.com/",
     "status": "alive",
-    "ms": 4953,
+    "ms": 2687,
     "err": ""
   },
   {
     "key": "cb_d4d7f6ca",
     "api": "https://xingba222.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 1859,
+    "ms": 859,
     "err": ""
   },
   {
     "key": "cb_d59a81f4",
     "api": "https://yayazy2.com/api.php/provide/vod/at/xml",
     "status": "alive",
-    "ms": 1858,
+    "ms": 843,
     "err": ""
   },
   {
     "key": "cb_d5eea15d",
     "api": "https://slapibf.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 1937,
+    "ms": 891,
     "err": ""
   },
   {
     "key": "cb_d6332d23",
     "api": "https://tyyszyapi.com/api.php/provide/vod/",
     "status": "alive",
-    "ms": 1500,
+    "ms": 780,
     "err": ""
   },
   {
     "key": "cb_d6a20e1f",
     "api": "https://xsd.sdzyapi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 1812,
+    "ms": 796,
     "err": ""
   },
   {
     "key": "cb_da195c6d",
     "api": "https://www.1av.shop/vodtype/25.html",
     "status": "unknown",
-    "ms": 5125,
+    "ms": 531,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_dac52c91",
     "api": "https://www.modiandy.com",
     "status": "unknown",
-    "ms": 1719,
+    "ms": 1328,
     "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>(反爬疑似)"
   },
   {
     "key": "cb_e0aa021e",
     "api": "https://api.okzyw.net/api.php/provide/vod",
     "status": "alive",
-    "ms": 2937,
+    "ms": 733,
     "err": ""
   },
   {
     "key": "cb_e2cb179d",
     "api": "https://piaoxue.co/vodshow/1--1-1--1---1---1.html",
     "status": "unknown",
-    "ms": 1358,
+    "ms": 546,
     "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_e3f22c21",
     "api": "https://www.wukamao.com/vodshow/1-1-1-1-1-1---1---1.html[https://www.wukamao.com/vodtype/1.html]",
-    "status": "unknown",
-    "ms": 8062,
-    "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
+    "status": "alive",
+    "ms": 4250,
+    "err": ""
   },
   {
     "key": "cb_e404d109",
     "api": "http://ntfeiyu.com/nt/1/area/1/by/1/class/1/lang/1/page/1/year/1.html",
     "status": "dead",
-    "ms": 8016,
+    "ms": 8030,
     "err": "timed out"
   },
   {
     "key": "cb_e4561b98",
     "api": "http://zhangqun1818.serv00.net/cj/cjjh.php",
-    "status": "dead",
-    "ms": 1360,
-    "err": "HTTP 502"
+    "status": "alive",
+    "ms": 4531,
+    "err": ""
   },
   {
     "key": "cb_e5e8d123",
     "api": "https://api.zuidapi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 1469,
+    "ms": 515,
     "err": ""
   },
   {
     "key": "cb_e7b24b11",
     "api": "https://360zy.com/api.php/provide/vod?",
     "status": "alive",
-    "ms": 2562,
+    "ms": 1516,
     "err": ""
   },
   {
     "key": "cb_ea0137a7",
     "api": "https://dora.xiaoxinbk.com/",
     "status": "alive",
-    "ms": 46,
+    "ms": 62,
     "err": ""
   },
   {
     "key": "cb_ec8968fd",
     "api": "http://chujia.cc/api.php/provide/vod/from/m3u8/",
     "status": "alive",
-    "ms": 3187,
+    "ms": 1812,
     "err": ""
   },
   {
     "key": "cb_ed356b19",
     "api": "https://www.jskji.com/sh/1-----------/area/1/by/1/class/1/id/1/page/1/year/1.html",
     "status": "unknown",
-    "ms": 8062,
+    "ms": 8030,
     "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
   },
   {
     "key": "cb_ef2bbe6f",
     "api": "https://jyzyapi.com/provide/vod/from/jinyingm3u8/at/xml/",
     "status": "alive",
-    "ms": 2015,
+    "ms": 1078,
     "err": ""
   },
   {
     "key": "cb_ef9c6ee8",
     "api": "https://yingqu.net/vodshow/1-1-1-1-1-1---1---1.html",
     "status": "unknown",
-    "ms": 8062,
+    "ms": 8032,
     "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
   },
   {
     "key": "cb_effbecce",
     "api": "https://www.hzptec.com",
     "status": "unknown",
-    "ms": 8062,
+    "ms": 8030,
     "err": "<urlopen error _ssl.c:989: The handshake operation timed out>(反爬疑似)"
   },
   {
     "key": "cb_f02aeb42",
     "api": "https://caiji.semaozy.net/inc/apijson_vod.php",
     "status": "alive",
-    "ms": 1889,
+    "ms": 891,
     "err": ""
   },
   {
     "key": "cb_f26271a0",
     "api": "https://www.xrbsp.com/api/xml.php",
     "status": "alive",
-    "ms": 1671,
+    "ms": 891,
     "err": ""
   },
   {
     "key": "cb_f38d5385",
     "api": "https://www.pgxdy.com/api/xml.php",
     "status": "alive",
-    "ms": 1703,
+    "ms": 750,
     "err": ""
   },
   {
     "key": "cb_f477caaa",
     "api": "https://caiji.dbzy5.com/api.php/provide/vod/at/xml/",
-    "status": "dead",
-    "ms": 7187,
-    "err": "Remote end closed connection without response"
+    "status": "alive",
+    "ms": 1234,
+    "err": ""
   },
   {
     "key": "cb_f6f69dc2",
     "api": "https://xingba222.com/api.php/provide/vod/at/xml",
-    "status": "dead",
-    "ms": 6827,
-    "err": "Remote end closed connection without response"
+    "status": "alive",
+    "ms": 577,
+    "err": ""
   },
   {
     "key": "cb_f73119a4",
     "api": "http://ffzy.tv/api.php/provide/vod/",
-    "status": "dead",
-    "ms": 6625,
-    "err": "Remote end closed connection without response"
+    "status": "alive",
+    "ms": 500,
+    "err": ""
   },
   {
     "key": "cb_f90d235c",
     "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8/at/json",
-    "status": "dead",
-    "ms": 6422,
-    "err": "Remote end closed connection without response"
+    "status": "alive",
+    "ms": 985,
+    "err": ""
   },
   {
     "key": "cb_f98b9af1",
     "api": "http://zuidazy.me/api.php/provide/vod/",
-    "status": "dead",
-    "ms": 6047,
-    "err": "Remote end closed connection without response"
+    "status": "alive",
+    "ms": 421,
+    "err": ""
   },
   {
     "key": "cb_fc5efdf7",
     "api": "https://apilj.com/api.php/provide/vod/at/json/",
-    "status": "dead",
-    "ms": 5922,
-    "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+    "status": "alive",
+    "ms": 984,
+    "err": ""
   },
   {
     "key": "cb_fd750ede",
     "api": "https://www.ysxq.cc/api.php/provide/vod",
-    "status": "dead",
-    "ms": 6187,
-    "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+    "status": "alive",
+    "ms": 1405,
+    "err": ""
   },
   {
     "key": "cb_fe92b00f",
     "api": "https://m3u8.apiyhzy.com/api.php/provide/vod/",
-    "status": "dead",
-    "ms": 5672,
-    "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+    "status": "alive",
+    "ms": 702,
+    "err": ""
   },
   {
     "key": "cb_feedf8ef",
     "api": "http://www.hairuiyy.com/",
     "status": "unknown",
-    "ms": 5594,
-    "err": "Remote end closed connection without response(反爬疑似)"
+    "ms": 282,
+    "err": "HTTP 403(反爬疑似)"
   },
   {
     "key": "cb_ff2b1390",
     "api": "https://naixxzy.com/api.php/provide/vod/",
-    "status": "dead",
-    "ms": 5344,
-    "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+    "status": "alive",
+    "ms": 1015,
+    "err": ""
   },
   {
     "key": "cb_guazi",
@@ -1549,9 +1556,9 @@
   {
     "key": "dj_360",
     "api": "https://360zyzz.com/api.php/provide/vod",
-    "status": "dead",
-    "ms": 5030,
-    "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+    "status": "alive",
+    "ms": 702,
+    "err": ""
   },
   {
     "key": "dj_baima",
@@ -1577,16 +1584,16 @@
   {
     "key": "dj_douban",
     "api": "https://caiji.dbzy5.com/api.php/provide/vod",
-    "status": "dead",
-    "ms": 5077,
-    "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+    "status": "alive",
+    "ms": 1469,
+    "err": ""
   },
   {
     "key": "dj_dytt",
     "api": "http://caiji.dyttzyapi.com/api.php/provide/vod",
-    "status": "dead",
-    "ms": 5000,
-    "err": "Remote end closed connection without response"
+    "status": "alive",
+    "ms": 500,
+    "err": ""
   },
   {
     "key": "dj_haokan",
@@ -1619,9 +1626,9 @@
   {
     "key": "dj_hongniu",
     "api": "https://www.hongniuzy2.com/api.php/provide/vod",
-    "status": "dead",
-    "ms": 5016,
-    "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+    "status": "alive",
+    "ms": 328,
+    "err": ""
   },
   {
     "key": "dj_jike",
@@ -1654,16 +1661,16 @@
   {
     "key": "dj_maotai",
     "api": "https://caiji.maotaizy.cc/api.php/provide/vod",
-    "status": "dead",
-    "ms": 5062,
-    "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+    "status": "alive",
+    "ms": 1765,
+    "err": ""
   },
   {
     "key": "dj_modu",
     "api": "https://www.mdzyapi.com/api.php/provide/vod",
-    "status": "dead",
-    "ms": 5077,
-    "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+    "status": "alive",
+    "ms": 984,
+    "err": ""
   },
   {
     "key": "dj_qm",
@@ -1675,9 +1682,9 @@
   {
     "key": "dj_uku",
     "api": "https://api.ukuapi88.com/api.php/provide/vod",
-    "status": "dead",
-    "ms": 5030,
-    "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+    "status": "alive",
+    "ms": 484,
+    "err": ""
   },
   {
     "key": "dj_xifan",
@@ -1696,148 +1703,155 @@
   {
     "key": "dj_zuida",
     "api": "https://zuida.xyz/api.php/provide/vod",
-    "status": "dead",
-    "ms": 5031,
-    "err": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1006)>"
+    "status": "alive",
+    "ms": 718,
+    "err": ""
   },
   {
     "key": "dj_猫眼",
     "api": "https://api.maoyanapi.top/api.php/provide/vod",
     "status": "alive",
-    "ms": 1562,
+    "ms": 750,
     "err": ""
   },
   {
     "key": "s_U酷",
     "api": "https://api.ukuapi88.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2375,
+    "ms": 1218,
     "err": ""
   },
   {
     "key": "s_无尽",
     "api": "https://api.wujinapi.me/api.php/provide/vod",
     "status": "alive",
-    "ms": 1766,
+    "ms": 437,
     "err": ""
   },
   {
     "key": "s_最大",
     "api": "https://zuida.xyz/api.php/provide/vod",
     "status": "alive",
-    "ms": 2233,
+    "ms": 765,
     "err": ""
   },
   {
     "key": "s_极速",
     "api": "https://jszyapi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2203,
+    "ms": 859,
     "err": ""
   },
   {
     "key": "s_爱奇艺",
     "api": "https://iqiyizyapi.com/api.php/provide/vod",
-    "status": "dead",
-    "ms": 3312,
-    "err": "HTTP 503"
+    "status": "alive",
+    "ms": 2030,
+    "err": ""
   },
   {
     "key": "s_电影天堂",
     "api": "https://caiji.dyttzyapi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2593,
+    "ms": 1280,
     "err": ""
   },
   {
     "key": "s_红牛",
     "api": "https://www.hongniuzy2.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2125,
+    "ms": 671,
+    "err": ""
+  },
+  {
+    "key": "s_艾旦",
+    "api": "https://lovedan.net/api.php/provide/vod",
+    "status": "alive",
+    "ms": 562,
     "err": ""
   },
   {
     "key": "s_茅台",
     "api": "https://caiji.maotaizy.cc/api.php/provide/vod",
     "status": "alive",
-    "ms": 4655,
+    "ms": 2765,
     "err": ""
   },
   {
     "key": "s_虎牙",
     "api": "https://www.huyaapi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2592,
+    "ms": 687,
     "err": ""
   },
   {
     "key": "s_豆瓣",
     "api": "https://caiji.dbzy5.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 3905,
+    "ms": 2921,
     "err": ""
   },
   {
     "key": "s_豪华",
     "api": "https://hhzyapi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 1782,
+    "ms": 625,
     "err": ""
   },
   {
     "key": "s_速播",
     "api": "https://subocaiji.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2312,
+    "ms": 750,
     "err": ""
   },
   {
     "key": "s_量子",
     "api": "https://cj.lziapi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2125,
+    "ms": 812,
     "err": ""
   },
   {
     "key": "s_金鹰",
     "api": "https://jinyingzy.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2593,
+    "ms": 905,
     "err": ""
   },
   {
     "key": "s_闪电",
     "api": "https://sdzyapi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 1812,
+    "ms": 719,
     "err": ""
   },
   {
     "key": "s_非凡",
     "api": "https://api.ffzyapi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2406,
+    "ms": 1233,
     "err": ""
   },
   {
     "key": "s_魔都",
     "api": "https://www.mdzyapi.com/api.php/provide/vod",
     "status": "alive",
-    "ms": 2296,
+    "ms": 1092,
     "err": ""
   },
   {
     "key": "xf_SX影视",
     "api": "http://124.222.116.5/mb/mb/sxys/api.php/provide/vod/",
     "status": "dead",
-    "ms": 234,
+    "ms": 93,
     "err": "响应无判活痕迹"
   },
   {
     "key": "xf_新秒播",
     "api": "http://124.222.30.115/mb/api.php/provide/vod/",
     "status": "dead",
-    "ms": 250,
+    "ms": 92,
     "err": "响应无判活痕迹"
   }
 ]
