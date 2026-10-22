@@ -2997,6 +2997,32 @@
         "播放标题": "\">&&</a>",
         "播放链接": "href=\"&&\""
       }
+    },
+    {
+      "key": "panbox_qy",
+      "name": "QY影视",
+      "group": "影视",
+      "tpl": "xbpq.js",
+      "ext": {
+        "请求头": "User-Agent$Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0.0.0 Safari/537.36#Referer$http://www.wdbay.com/",
+        "搜索url": "http://www.wdbay.com/search.php?searchword={wd}",
+        "数组": "class=\"thumb\"&&</li>",
+        "标题": "title=\"&&\"",
+        "链接": "href=\"&&\"",
+        "图片": "data-original=\"&&\"",
+        "副标题": "class=\"pic-text text-right\">&&</span>",
+        "影片标题": "<h1 class=\"line1\">&&</h1>",
+        "影片图片": "data-original=\"&&\"",
+        "简介": "简介：</span>&&<a href=\"#desc\"",
+        "播放数组": "class=\"stui-content__playlist&&</ul>",
+        "播放列表": "<li&&</li>",
+        "播放标题": "\">&&<",
+        "播放链接": "href=\"&&\"",
+        "搜索方法": "post",
+        "搜索body": "searchword={wd}",
+        "线路数组": "data-toggle=\"tab\"&&</a",
+        "线路标题": ">播放源&&"
+      }
     }
   ]
 }

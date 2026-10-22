@@ -186,7 +186,18 @@ var rule = {
             ? this._tpl(tplS, { wd: this._enc(wd), pg: pg, catePg: '1', cateId: '', by: '', area: '', year: '', lang: '', class: '', letter: '', sorter: '', addtime: '' })
             : this._tpl(tplS, { cateId: cateId, catePg: pg, pg: pg, by: '', area: '', year: '', lang: '', class: '', letter: '', sorter: '', addtime: '' });
         var hdr = this._headers(this._rs(isSearch ? ['搜索请求头', '请求头'] : ['请求头']));
-        var page = request(url, { headers: hdr }).content;
+        // POST 搜索支持(如 QY影视 wdbay 仅收 POST):ext「搜索方法」=post +「搜索body」模板
+        var reqOpt = { headers: hdr };
+        var method = this._rs(['搜索方法', '请求方法']);
+        var bodyTpl = isSearch ? this._rs(['搜索body', '请求body']) : '';
+        if (isSearch && method && method.toLowerCase() === 'post' && bodyTpl) {
+            reqOpt.method = 'POST';
+            reqOpt.body = this._tpl(bodyTpl, { wd: this._enc(wd), pg: pg, catePg: '1', cateId: '', by: '', area: '', year: '', lang: '', class: '', letter: '', sorter: '', addtime: '' });
+            var hasCt = false;
+            for (var hk in reqOpt.headers) { if (hk.toLowerCase() === 'content-type') hasCt = true; }
+            if (!hasCt) reqOpt.headers['Content-Type'] = 'application/x-www-form-urlencoded';
+        }
+        var page = request(url, reqOpt).content;
         var html = this._preCut(page, this._rs(['搜索二次截取', '二次截取']));
         var arr = this._rs(isSearch ? ['搜索数组', '数组'] : ['数组']);
         var blocks = this._cutAll(html, arr);
