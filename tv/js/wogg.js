@@ -60,6 +60,16 @@ function __panLabel(g) {
     return map[g] || g;
 }
 
+// HTML 实体解码：玩偶站封面经百度图床代理，URL 里带 &amp; 未解码时请求直接 400
+function __htmUnesc(s) {
+    return String(s || '')
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&#39;/g, "'");
+}
+
 var rule = {
     title: '玩偶',
     host: EXT.host,
@@ -96,7 +106,7 @@ var rule = {
             var id = m[1];
             if (seen[id]) continue;
             seen[id] = 1;
-            d.push({ title: m[2], img: m[3], desc: '', url: id });
+            d.push({ title: __htmUnesc(m[2]), img: __htmUnesc(m[3]), desc: '', url: id });
         }
         return d;
     },
@@ -135,7 +145,7 @@ var rule = {
         return {
             vod_id: this.input,
             vod_name: t ? t[1] : '玩偶',
-            vod_pic: pic ? pic[1] : '',
+            vod_pic: pic ? __htmUnesc(pic[1]) : '',
             vod_remarks: remarks,
             vod_content: intro ? intro[1].replace(/<[^>]+>/g, '').trim().slice(0, 500) : '',
             vod_play_from: froms.join('$$$'),
