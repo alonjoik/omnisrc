@@ -3025,6 +3025,15 @@
         "跳转播放链接": "content.php?vid=&&&type",
         "跳转前缀": "https://meizi.yongfan99.com/content.php?vid="
       }
+    },
+    {
+      "key": "s_1d161cc8",
+      "name": "大地",
+      "group": "影视",
+      "tpl": "maccms.js",
+      "ext": {
+        "api": "https://dadiapi.com/api.php/provide/vod"
+      }
     }
   ]
 }
