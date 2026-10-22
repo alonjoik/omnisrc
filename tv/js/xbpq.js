@@ -314,7 +314,14 @@ var rule = {
             var hdr = this._headers(this._rs(['请求头']));
             var html = request(u, { headers: hdr }).content;
             var t = this._cut1(html, jump);
-            if (t) u = t.replace(/\\\//g, '/').replace(/\\"/g, '"');
+            if (t) {
+                // 「跳转前缀」:截取值为参数(如 vid 值)时拼回直链前缀
+                var prefix = this._rs(['跳转前缀']);
+                u = (prefix || '') + t.replace(/\\\//g, '/').replace(/\\"/g, '"');
+                // 跳转截取命中=已解析直链(含 content.php?vid= 等无后缀动态流,响应即
+                // MP4 分段流)——parse:0 交宿主流式播放并透传站点头(QY影视 wdbay 形态)
+                return JSON.stringify({ parse: 0, url: u, header: { 'Referer': hdr['Referer'] || u, 'User-Agent': hdr['User-Agent'] || '' } });
+            }
         }
         var direct = /\.(m3u8|mp4|flv|mkv|ts)(\?|$)/i.test(u);
         return JSON.stringify({ parse: direct ? 0 : 1, url: u, header: {} });
