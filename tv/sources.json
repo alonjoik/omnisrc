@@ -3022,7 +3022,7 @@
         "搜索body": "searchword={wd}",
         "线路数组": "data-toggle=\"tab\"&&</a",
         "线路标题": ">播放源&&",
-        "跳转播放链接": "content.php?vid=&&\"",
+        "跳转播放链接": "content.php?vid=&&&type",
         "跳转前缀": "https://meizi.yongfan99.com/content.php?vid="
       }
     }
