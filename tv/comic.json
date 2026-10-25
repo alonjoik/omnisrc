@@ -1,0 +1,79 @@
+{
+  "sites": [
+    {
+      "key": "cm_baozi",
+      "name": "包子漫画",
+      "searchable": 1,
+      "type": 3,
+      "kind": "panboxjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/baozi.js",
+      "filterable": 1,
+      "group": "漫画",
+      "ext": "https://cn.dinnerku.com"
+    },
+    {
+      "key": "cm_baozi2",
+      "name": "包子漫画·备线",
+      "searchable": 1,
+      "type": 3,
+      "kind": "panboxjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/baozi.js",
+      "filterable": 1,
+      "group": "漫画",
+      "ext": "https://www.dinnerku.com"
+    },
+    {
+      "key": "cm_copy",
+      "name": "拷贝漫画",
+      "searchable": 1,
+      "type": 3,
+      "kind": "panboxjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/copy.js",
+      "filterable": 1,
+      "group": "漫画"
+    },
+    {
+      "key": "cm_zymk",
+      "name": "知音漫画",
+      "searchable": 1,
+      "type": 3,
+      "kind": "panboxjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/zymk.js",
+      "filterable": 1,
+      "group": "漫画"
+    },
+    {
+      "key": "cm_mangadex_zh",
+      "name": "MangaDex · 简中",
+      "searchable": 1,
+      "type": 3,
+      "kind": "panboxjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/mangadex.js",
+      "filterable": 1,
+      "group": "漫画",
+      "ext": "{\"lang\":\"zh\"}"
+    },
+    {
+      "key": "cm_mangadex_zh_hk",
+      "name": "MangaDex · 繁中",
+      "searchable": 1,
+      "type": 3,
+      "kind": "panboxjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/mangadex.js",
+      "filterable": 1,
+      "group": "漫画",
+      "ext": "{\"lang\":\"zh-hk\"}"
+    },
+    {
+      "key": "cm_mangadex_en",
+      "name": "MangaDex · English",
+      "searchable": 1,
+      "type": 3,
+      "kind": "panboxjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/mangadex.js",
+      "filterable": 1,
+      "group": "漫画",
+      "ext": "{\"lang\":\"en\"}"
+    }
+  ]
+}
