@@ -5,32 +5,22 @@
       "name": "包子漫画",
       "searchable": 1,
       "type": 3,
-      "kind": "panboxjs",
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/baozi.js",
+      "kind": "comicjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/baozimh.js",
       "filterable": 1,
       "group": "漫画",
-      "ext": "https://cn.dinnerku.com"
+      "ext": "{\"domains\":\"dinnerku.com\"}"
     },
     {
       "key": "cm_baozi2",
       "name": "包子漫画·备线",
       "searchable": 1,
       "type": 3,
-      "kind": "panboxjs",
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/baozi.js",
+      "kind": "comicjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/baozimh.js",
       "filterable": 1,
       "group": "漫画",
-      "ext": "https://www.dinnerku.com"
-    },
-    {
-      "key": "cm_copy",
-      "name": "拷贝漫画",
-      "searchable": 1,
-      "type": 3,
-      "kind": "panboxjs",
-      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/copy.js",
-      "filterable": 1,
-      "group": "漫画"
+      "ext": "{\"domains\":\"webmota.com\"}"
     },
     {
       "key": "cm_zymk",
@@ -74,6 +64,76 @@
       "filterable": 1,
       "group": "漫画",
       "ext": "{\"lang\":\"en\"}"
+    },
+    {
+      "key": "vn_manhuagui",
+      "name": "漫画柜",
+      "searchable": 1,
+      "type": 3,
+      "kind": "comicjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/manhuagui.js",
+      "filterable": 1,
+      "group": "漫画"
+    },
+    {
+      "key": "vn_dm5",
+      "name": "动漫屋",
+      "searchable": 1,
+      "type": 3,
+      "kind": "comicjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/dm5.js",
+      "filterable": 1,
+      "group": "漫画"
+    },
+    {
+      "key": "vn_manhuaren",
+      "name": "漫画人",
+      "searchable": 1,
+      "type": 3,
+      "kind": "comicjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/manhuaren.js",
+      "filterable": 1,
+      "group": "漫画"
+    },
+    {
+      "key": "vn_gufeng",
+      "name": "古风漫画",
+      "searchable": 1,
+      "type": 3,
+      "kind": "comicjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/gfmh.js",
+      "filterable": 1,
+      "group": "漫画"
+    },
+    {
+      "key": "vn_mangabz",
+      "name": "Mangabz",
+      "searchable": 1,
+      "type": 3,
+      "kind": "comicjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/mangabz.js",
+      "filterable": 1,
+      "group": "漫画"
+    },
+    {
+      "key": "vn_feixiang",
+      "name": "飞翔漫画",
+      "searchable": 1,
+      "type": 3,
+      "kind": "comicjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/ffppt.js",
+      "filterable": 1,
+      "group": "漫画"
+    },
+    {
+      "key": "vn_copymanga",
+      "name": "拷贝漫画·源",
+      "searchable": 1,
+      "type": 3,
+      "kind": "comicjs",
+      "api": "https://raw.githubusercontent.com/alonjoik/omnisrc/main/tv/js/copy_manga.js",
+      "filterable": 1,
+      "group": "漫画"
     }
   ]
 }
