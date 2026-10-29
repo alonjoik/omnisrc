@@ -1,7 +1,7 @@
 /**
  * @name PanBox音源
  * @description 一条链接全量音乐源：五平台(酷我/酷狗/QQ/网易/咪咕)搜索·榜单·歌词·取链 + 蜻蜓电台 + 听友音乐
- * @version 2.0.0
+ * @version 2.0.1
  * @author PanBox（内核 SDK © lyswhut lx-music；取链聚合 © Lincoln 六音音源 MIT）
  * @homepage https://github.com/lyswhut/lx-music-mobile
  */
@@ -19554,43 +19554,63 @@ ${lrclist ? lrclist.map((l) => `[${l.time}]${l.text}
         successCode: 0,
         musicSearch(str, page, limit, retryNum = 0) {
           if (retryNum > 5) return Promise.reject(new Error("搜索失败"));
-          const searchRequest = signRequest({
-            comm: {
-              _channelid: "0",
-              _os_version: "6.2.9200-2",
-              ct: "19",
-              cv: "2151",
-              guid: "1F70E520B2EAA7D25E11760783C53CA9",
-              patch: "118",
-              psrf_access_token_expiresAt: 0,
-              psrf_qqaccess_token: "",
-              psrf_qqopenid: "",
-              psrf_qqunionid: "",
-              tmeAppID: "qqmusic",
-              tmeLoginType: 0,
-              uin: "0",
-              wid: "7223299733393904640"
+          // 2026-10 匿名搜索新线：musicu.fcg 裸 POST（无需 zzc 签名）+ DoSearchForQQMusicMobile +
+          // android comm（旧 musics.fcg+zzc 签名+Desktop 形态被上游全量拒绝；经 L-1124/QQMusicApi 实弹验证）。
+          // 响应容器归一化：Mobile 的 body.item_song → Desktop 语义 body.song.list / meta.sum（search() 零改动）
+          const hexGuid32 = () => { let s = ""; for (let i = 0; i < 32; i++) s += Math.floor(Math.random() * 16).toString(16); return s; };
+          const d0 = new Date();
+          const p2 = (n, w) => String(n).padStart(w, "0");
+          const sid = `${d0.getFullYear()}${p2(d0.getMonth() + 1, 2)}${p2(d0.getDate(), 2)}${p2(d0.getHours(), 2)}${p2(d0.getMinutes(), 2)}${p2(d0.getSeconds(), 2)}`;
+          const searchid = String(BigInt(1 + Math.floor(Math.random() * 20)) * 18014398509481984n + BigInt(Math.floor(Math.random() * 4194305)) * 4294967296n + BigInt(Date.now() % 864e5));
+          const searchRequest = httpFetch("https://u.y.qq.com/cgi-bin/musicu.fcg", {
+            method: "post",
+            headers: {
+              "User-Agent": "QQMusic 20090008(android 16)"
             },
-            "music.search.SearchCgiService": {
-              module: "music.search.SearchCgiService",
-              method: "DoSearchForQQMusicDesktop",
-              param: {
-                grp: 1,
-                num_per_page: limit,
-                page_num: page,
-                query: str,
-                remoteplace: "txt.newclient.top",
-                search_type: 0,
-                searchid: this.getSearchId()
+            body: {
+              comm: {
+                ct: "11",
+                cv: "20090008",
+                v: "20090008",
+                tmeAppID: "qqmusic",
+                chid: "10003505",
+                QIMEI36: "a4b97890df4ce85af6ea4dd810001f01aa16",
+                traceid: "10002_" + hexGuid32() + "_" + Date.now(),
+                OpenUDID: hexGuid32(),
+                OpenUDID2: hexGuid32(),
+                udid: hexGuid32(),
+                aid: "fec4f3bb7357533c",
+                uid: "6822670964",
+                sid,
+                os_ver: "16",
+                phonetype: "24129PN74C"
+              },
+              "music.search.SearchCgiService": {
+                module: "music.search.SearchCgiService",
+                method: "DoSearchForQQMusicMobile",
+                param: {
+                  searchid,
+                  query: str,
+                  search_type: 0,
+                  num_per_page: limit,
+                  page_num: page,
+                  highlight: 1,
+                  grp: 1,
+                  selectors: {},
+                  vec_selectors: []
+                }
               }
             }
           });
-          return searchRequest.then(({ body }) => {
+          return searchRequest.promise.then(({ body }) => {
             const req = body?.["music.search.SearchCgiService"] ?? body?.req;
             if (!req || body.code != this.successCode || req.code != this.successCode) {
               return this.musicSearch(str, page, limit, ++retryNum);
             }
-            return req.data;
+            const d = req.data || {};
+            const songs = d.body && d.body.item_song || [];
+            const total = (d.meta && (d.meta.sum ?? d.meta.estimate_sum)) || songs.length;
+            return { body: { song: { list: songs, total_num: total } }, meta: { sum: total } };
           });
         },
         /**
