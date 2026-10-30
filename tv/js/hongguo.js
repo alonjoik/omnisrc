@@ -40,7 +40,8 @@ var rule = {
         var pg = String(this.MY_PAGE || 1);
         if (typeof __hongguoApi === 'function') {
             var r = hgCall('category', [tid, pg]);
-            return (r && r.list) || [];
+            // pagecount 须透传（宿主分页器依赖）；只回 list 会让前端按单页处理——无法翻页
+            return { list: (r && r.list) || [], pagecount: (r && r.pagecount) || 1 };
         }
         var page = Math.max(1, parseInt(pg, 10) || 1);
         var path = tid.indexOf('hot-') === 0 ? 'rank' : 'category';
