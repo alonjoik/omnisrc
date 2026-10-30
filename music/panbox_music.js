@@ -1,7 +1,7 @@
 /**
  * @name PanBox音源
  * @description 一条链接全量音乐源：五平台(酷我/酷狗/QQ/网易/咪咕)搜索·榜单·歌词·取链 + 蜻蜓电台 + 听友音乐
- * @version 2.0.1
+ * @version 2.0.0
  * @author PanBox（内核 SDK © lyswhut lx-music；取链聚合 © Lincoln 六音音源 MIT）
  * @homepage https://github.com/lyswhut/lx-music-mobile
  */
@@ -445,7 +445,7 @@ send(EVENT_NAMES.inited, { openDevTools: false, sources: sourceConfig })
 
 console.log('1010🎵音源 v1.0.0 已加载 —— 平台: wy/tx/kw/kg/mg')
 
-  globalThis.__PANBOX_SOUND = __cap.handler;
+  globalThis.__IBOX_SOUND = __cap.handler;
 })();
 ;(function () {
   const __cap = { handler: null };
@@ -453,7 +453,7 @@ console.log('1010🎵音源 v1.0.0 已加载 —— 平台: wy/tx/kw/kg/mg')
  * @name 蜻蜓电台
  * @description PanBox 内置广播电台源
  * @version 1.0.0
- * @author PanBox Reborn
+ * @author PanBox
  */
 // panbox_qtfm.js — 蜻蜓 FM 电台（落雪扩展 action 适配器；蓝本 qtfm.js，协议零变化）
 // 协议：GraphQL POST https://webbff.qtfm.cn/www {radioPage(cid,page){contents} / searchResultsPage}；
@@ -586,7 +586,7 @@ send(EVENT_NAMES.inited, {
     },
 })
 
-  globalThis.__PANBOX_QTFM = __cap.handler;
+  globalThis.__IBOX_QTFM = __cap.handler;
 })();
 ;(function () {
   const __cap = { handler: null };
@@ -932,7 +932,7 @@ send(EVENT_NAMES.inited, {
   },
 })
 
-  globalThis.__PANBOX_TINGYOU = __cap.handler;
+  globalThis.__IBOX_TINGYOU = __cap.handler;
 })();
 "use strict";
 (() => {
@@ -1227,6 +1227,11 @@ send(EVENT_NAMES.inited, {
         }
         subarray(start = 0, end) {
           return _Buf.from(this.slice(start, end === void 0 ? this.length : end));
+        }
+        // TypedArray.set 语义（qrcDecode 3DES 分组写回依赖；Array 无此方法）
+        set(arr, offset = 0) {
+          for (let i = 0; i < arr.length; i++) this[offset + i] = arr[i];
+          return this.length;
         }
         slice(start = 0, end) {
           const a = super.slice(start, end === void 0 ? this.length : end);
@@ -7863,68 +7868,6 @@ send(EVENT_NAMES.inited, {
   });
 
   // src/shims/crypto.js
-  function sha1Bytes(msgBytes) {
-    const ml = msgBytes.length;
-    const withOne = msgBytes.concat([128]);
-    while (withOne.length % 64 !== 56) withOne.push(0);
-    const bitLenHi = Math.floor(ml / 536870912);
-    const bitLenLo = ml << 3 >>> 0;
-    withOne.push(bitLenHi >>> 24 & 255, bitLenHi >>> 16 & 255, bitLenHi >>> 8 & 255, bitLenHi & 255);
-    withOne.push(bitLenLo >>> 24 & 255, bitLenLo >>> 16 & 255, bitLenLo >>> 8 & 255, bitLenLo & 255);
-    let h0 = 1732584193 | 0, h1 = 4023233417 | 0, h2 = 2562383102 | 0, h3 = 271733878 | 0, h4 = 3285377520 | 0;
-    const w = new Array(80);
-    const rr = (x, n) => x << n | x >>> 32 - n | 0;
-    for (let off = 0; off < withOne.length; off += 64) {
-      for (let i = 0; i < 16; i++) {
-        w[i] = withOne[off + i * 4] << 24 | withOne[off + i * 4 + 1] << 16 | withOne[off + i * 4 + 2] << 8 | withOne[off + i * 4 + 3] | 0;
-      }
-      for (let i = 16; i < 80; i++) w[i] = rr(w[i - 3] ^ w[i - 8] ^ w[i - 14] ^ w[i - 16], 1);
-      let a = h0, b = h1, c = h2, d = h3, e = h4;
-      for (let i = 0; i < 80; i++) {
-        let f, k;
-        if (i < 20) {
-          f = b & c | ~b & d;
-          k = 1518500249;
-        } else if (i < 40) {
-          f = b ^ c ^ d;
-          k = 1859775393;
-        } else if (i < 60) {
-          f = b & c | b & d | c & d;
-          k = 2400959708;
-        } else {
-          f = b ^ c ^ d;
-          k = 3395469782;
-        }
-        const t = rr(a, 5) + f + e + k + w[i] | 0;
-        e = d;
-        d = c;
-        c = rr(b, 30);
-        b = a;
-        a = t;
-      }
-      h0 = h0 + a | 0;
-      h1 = h1 + b | 0;
-      h2 = h2 + c | 0;
-      h3 = h3 + d | 0;
-      h4 = h4 + e | 0;
-    }
-    const out = [];
-    for (const h of [h0, h1, h2, h3, h4]) out.push(h >>> 24 & 255, h >>> 16 & 255, h >>> 8 & 255, h & 255);
-    return out;
-  }
-  function hashSHA1(str) {
-    if (typeof __lxSha1 === "function") return Promise.resolve(__lxSha1(str));
-    const u = encodeURIComponent(String(str));
-    const bytes = [];
-    for (let i = 0; i < u.length; i++) {
-      if (u[i] === "%") {
-        bytes.push(parseInt(u.substr(i + 1, 2), 16));
-        i += 2;
-      } else bytes.push(u.charCodeAt(i));
-    }
-    const hex = sha1Bytes(bytes).map((x) => x.toString(16).padStart(2, "0")).join("");
-    return Promise.resolve(hex);
-  }
   function aesEncryptSync(dataB64, keyB64, ivB64, mode) {
     const key = import_crypto_js.default.enc.Base64.parse(keyB64);
     if (mode === AES_MODE.ECB_128_NoPadding) {
@@ -16283,7 +16226,7 @@ ${lrclist ? lrclist.map((l) => `[${l.time}]${l.text}
         for (let i = 0, len = buf_str.length; i < len; i++) {
           buf_str[i] = buf_str[i] ^ enc_key[i % 16];
         }
-        const result = inflate2(buf_str, { to: "string" });
+        const result = Buffer2.from(inflate2(buf_str)).toString("utf-8");
         resolve(result);
       });
       signatureParams = (params, platform = "android", body = "") => {
@@ -19491,61 +19434,30 @@ ${lrclist ? lrclist.map((l) => `[${l.time}]${l.text}
     }
   });
 
-  // src/musicSdk/tx/utils/crypto.js
-  function pickHashByIdx(hash, indexes) {
-    return indexes.map((idx) => hash[idx]).join("");
-  }
-  function base64Encode(data) {
-    return Buffer2.from(data).toString("base64").replace(/[\\/+=]/g, "");
-  }
-  async function zzcSign(text) {
-    const hash = await hashSHA1(text);
-    const part1 = pickHashByIdx(hash, PART_1_INDEXES);
-    const part2 = pickHashByIdx(hash, PART_2_INDEXES);
-    const part3 = SCRAMBLE_VALUES.map((value, i) => value ^ parseInt(hash.slice(i * 2, i * 2 + 2), 16));
-    const b64Part = base64Encode(part3).replace(/[\\/+=]/g, "");
-    return `zzc${part1}${b64Part}${part2}`.toLowerCase();
-  }
-  var PART_1_INDEXES, PART_2_INDEXES, SCRAMBLE_VALUES;
-  var init_crypto2 = __esm({
-    "src/musicSdk/tx/utils/crypto.js"() {
-      "use strict";
-      init_buffer();
-      init_crypto();
-      PART_1_INDEXES = [23, 14, 6, 36, 16, 40, 7, 19];
-      PART_2_INDEXES = [16, 1, 32, 12, 19, 27, 8, 5];
-      SCRAMBLE_VALUES = [89, 39, 179, 150, 218, 82, 58, 252, 177, 52, 186, 123, 120, 64, 242, 133, 143, 161, 121, 179];
-    }
-  });
-
-  // src/musicSdk/tx/utils/index.js
-  var signRequest;
-  var init_utils2 = __esm({
-    "src/musicSdk/tx/utils/index.js"() {
-      "use strict";
-      init_request();
-      init_crypto2();
-      signRequest = async (data) => {
-        const sign = await zzcSign(JSON.stringify(data));
-        return httpFetch(`https://u.y.qq.com/cgi-bin/musics.fcg?sign=${sign}`, {
-          method: "post",
-          headers: {
-            "User-Agent": "QQMusic 14090508(android 12)"
-          },
-          body: data
-        }).promise;
-      };
-    }
-  });
-
   // src/musicSdk/tx/musicSearch.js
+  function hexGuid32() {
+    let s = "";
+    for (let i = 0; i < 32; i++) s += Math.floor(Math.random() * 16).toString(16);
+    return s;
+  }
+  function sidNow() {
+    const d = /* @__PURE__ */ new Date();
+    const p = (n, w) => String(n).padStart(w, "0");
+    return `${d.getFullYear()}${p(d.getMonth() + 1, 2)}${p(d.getDate(), 2)}${p(d.getHours(), 2)}${p(d.getMinutes(), 2)}${p(d.getSeconds(), 2)}`;
+  }
+  function newSearchId() {
+    const e = BigInt(1 + Math.floor(Math.random() * 20));
+    const n = BigInt(Math.floor(Math.random() * 4194305)) * 4294967296n;
+    const r = BigInt(Date.now() % 864e5);
+    return (e * 18014398509481984n + n + r).toString();
+  }
   var musicSearch_default3;
   var init_musicSearch3 = __esm({
     "src/musicSdk/tx/musicSearch.js"() {
       "use strict";
+      init_request();
       init_utils_index();
       init_utils();
-      init_utils2();
       musicSearch_default3 = {
         limit: 50,
         total: 0,
@@ -19554,14 +19466,6 @@ ${lrclist ? lrclist.map((l) => `[${l.time}]${l.text}
         successCode: 0,
         musicSearch(str, page, limit, retryNum = 0) {
           if (retryNum > 5) return Promise.reject(new Error("搜索失败"));
-          // 2026-10 匿名搜索新线：musicu.fcg 裸 POST（无需 zzc 签名）+ DoSearchForQQMusicMobile +
-          // android comm（旧 musics.fcg+zzc 签名+Desktop 形态被上游全量拒绝；经 L-1124/QQMusicApi 实弹验证）。
-          // 响应容器归一化：Mobile 的 body.item_song → Desktop 语义 body.song.list / meta.sum（search() 零改动）
-          const hexGuid32 = () => { let s = ""; for (let i = 0; i < 32; i++) s += Math.floor(Math.random() * 16).toString(16); return s; };
-          const d0 = new Date();
-          const p2 = (n, w) => String(n).padStart(w, "0");
-          const sid = `${d0.getFullYear()}${p2(d0.getMonth() + 1, 2)}${p2(d0.getDate(), 2)}${p2(d0.getHours(), 2)}${p2(d0.getMinutes(), 2)}${p2(d0.getSeconds(), 2)}`;
-          const searchid = String(BigInt(1 + Math.floor(Math.random() * 20)) * 18014398509481984n + BigInt(Math.floor(Math.random() * 4194305)) * 4294967296n + BigInt(Date.now() % 864e5));
           const searchRequest = httpFetch("https://u.y.qq.com/cgi-bin/musicu.fcg", {
             method: "post",
             headers: {
@@ -19581,7 +19485,7 @@ ${lrclist ? lrclist.map((l) => `[${l.time}]${l.text}
                 udid: hexGuid32(),
                 aid: "fec4f3bb7357533c",
                 uid: "6822670964",
-                sid,
+                sid: sidNow(),
                 os_ver: "16",
                 phonetype: "24129PN74C"
               },
@@ -19589,7 +19493,7 @@ ${lrclist ? lrclist.map((l) => `[${l.time}]${l.text}
                 module: "music.search.SearchCgiService",
                 method: "DoSearchForQQMusicMobile",
                 param: {
-                  searchid,
+                  searchid: newSearchId(),
                   query: str,
                   search_type: 0,
                   num_per_page: limit,
@@ -19609,14 +19513,10 @@ ${lrclist ? lrclist.map((l) => `[${l.time}]${l.text}
             }
             const d = req.data || {};
             const songs = d.body && d.body.item_song || [];
-            const total = (d.meta && (d.meta.sum ?? d.meta.estimate_sum)) || songs.length;
+            const total = d.meta && (d.meta.sum ?? d.meta.estimate_sum) || songs.length;
             return { body: { song: { list: songs, total_num: total } }, meta: { sum: total } };
           });
         },
-        /**
-         * PC 客户端版 searchid：32 位大写十六进制 GUID + 5 位补零随机数 = 37 字符。
-         * 对应 QQ 音乐 PC 端 searchid 形状（服务端只需要唯一的会话 ID，形状一致即可）。
-         */
         getSearchId() {
           let guid = "";
           for (let i = 0; i < 32; i++) guid += Math.floor(Math.random() * 16).toString(16);
@@ -20054,7 +19954,7 @@ ${lrclist ? lrclist.map((l) => `[${l.time}]${l.text}
 
   // src/musicSdk/wy/utils/crypto.js
   var iv, presetKey, linuxapiKey, publicKey, eapiKey, aesEncrypt, rsaEncrypt, weapi, eapi;
-  var init_crypto3 = __esm({
+  var init_crypto2 = __esm({
     "src/musicSdk/wy/utils/crypto.js"() {
       "use strict";
       init_buffer();
@@ -20226,7 +20126,7 @@ ${lrclist ? lrclist.map((l) => `[${l.time}]${l.text}
   var init_leaderboard4 = __esm({
     "src/musicSdk/wy/leaderboard.js"() {
       "use strict";
-      init_crypto3();
+      init_crypto2();
       init_request();
       init_utils_index();
       init_musicDetail();
@@ -20417,7 +20317,7 @@ ${lrclist ? lrclist.map((l) => `[${l.time}]${l.text}
     "src/musicSdk/wy/lyric.js"() {
       "use strict";
       init_request();
-      init_crypto3();
+      init_crypto2();
       eapiRequest = (url, data) => {
         return httpFetch("https://interface3.music.163.com/eapi/song/lyric/v1", {
           method: "post",
@@ -20625,7 +20525,7 @@ ${result.lyric}`;
     "src/musicSdk/wy/musicInfo.js"() {
       "use strict";
       init_request();
-      init_crypto3();
+      init_crypto2();
       musicInfo_default2 = (songmid) => {
         const requestObj = httpFetch("https://music.163.com/weapi/v3/song/detail", {
           method: "post",
@@ -20650,11 +20550,11 @@ ${result.lyric}`;
 
   // src/musicSdk/wy/utils/index.js
   var eapiRequest2;
-  var init_utils3 = __esm({
+  var init_utils2 = __esm({
     "src/musicSdk/wy/utils/index.js"() {
       "use strict";
       init_request();
-      init_crypto3();
+      init_crypto2();
       eapiRequest2 = (url, data) => {
         return httpFetch("http://interface.music.163.com/eapi/batch", {
           method: "post",
@@ -20675,7 +20575,7 @@ ${result.lyric}`;
     "src/musicSdk/wy/musicSearch.js"() {
       "use strict";
       init_utils_index();
-      init_utils3();
+      init_utils2();
       musicSearch_default4 = {
         limit: 30,
         total: 0,
@@ -20783,7 +20683,7 @@ ${result.lyric}`;
       init_request();
       init_utils_index();
       init_musicDetail();
-      init_utils3();
+      init_utils2();
       init_utils();
       songList_default4 = {
         _requestObj_tags: null,
@@ -21084,7 +20984,7 @@ ${result.lyric}`;
   var init_hotSearch4 = __esm({
     "src/musicSdk/wy/hotSearch.js"() {
       "use strict";
-      init_utils3();
+      init_utils2();
       hotSearch_default4 = {
         _requestObj: null,
         async getList(retryNum = 0) {
@@ -21110,7 +21010,7 @@ ${result.lyric}`;
     "src/musicSdk/wy/comment.js"() {
       "use strict";
       init_request();
-      init_crypto3();
+      init_crypto2();
       init_utils_index();
       emojis2 = [
         ["大笑", "😃"],
@@ -21346,7 +21246,7 @@ ${result.lyric}`;
 
   // src/musicSdk/mg/utils/index.js
   var createHttpFetch;
-  var init_utils4 = __esm({
+  var init_utils3 = __esm({
     "src/musicSdk/mg/utils/index.js"() {
       "use strict";
       init_request();
@@ -21372,7 +21272,7 @@ ${result.lyric}`;
     "src/musicSdk/mg/musicInfo.js"() {
       "use strict";
       init_utils_index();
-      init_utils4();
+      init_utils3();
       init_utils();
       createGetMusicInfosTask = (ids) => {
         let list = ids;
@@ -21521,7 +21421,7 @@ ${result.lyric}`;
         return getMusicInfos([copyrightId]).then((data) => data[0]);
       };
       getMusicInfos = async (copyrightIds) => {
-        return filterMusicInfoList(await Promise.all(createGetMusicInfosTask(copyrightIds)).then((data) => data.flat()));
+        return filterMusicInfoList(await createGetMusicInfosTask(copyrightIds).then((data) => data.flat()));
       };
     }
   });
@@ -21960,7 +21860,7 @@ ${result.lyric}`;
       init_utils_index();
       init_musicInfo3();
       init_musicSearch5();
-      init_utils4();
+      init_utils3();
       songList_default5 = {
         _requestObj_tags: null,
         _requestObj_list: null,
@@ -22634,7 +22534,7 @@ crypto-js/mode-ctr-gladman.js:
 const { EVENT_NAMES, request, on, send } = globalThis.lx
 const SDK = globalThis.__LX_SDK
 const SOURCES = ['kw', 'kg', 'tx', 'wy', 'mg']
-// 宿主探测：iBox 引擎提供 __lxRequestSync 同步原语；洛雪客户端走标准 lx.request（shim 已双端适配）
+// 宿主探测：PanBox 引擎提供 __lxRequestSync 同步原语；洛雪客户端走标准 lx.request（shim 已双端适配）
 const IS_IBOX = typeof __lxRequestSync === 'function'
 
 // musicSdk 运行时环境（getMusicType 读取；壳内先行补齐，不覆盖引擎的 lx API 其余字段）
@@ -22701,7 +22601,7 @@ function asPromise(v) {
 
 // 五平台取链模块（六音聚合，MIT © Lincoln；经 IIFE 捕获注册）
 function soundHandler() {
-  const h = globalThis.__PANBOX_SOUND
+  const h = globalThis.__IBOX_SOUND
   if (!h) throw new Error('取链模块未就绪')
   return h
 }
@@ -22719,13 +22619,13 @@ function handle(req) {
   const source = req.source
   const action = req.action
   // 内容站适配器（蜻蜓/听友）：整源路由到子模块 handler
-  if (source === 'panbox_qtfm') {
-    const h = globalThis.__PANBOX_QTFM
+  if (source === 'ibox_qtfm') {
+    const h = globalThis.__IBOX_QTFM
     if (!h) return Promise.reject(new Error('蜻蜓电台模块未就绪'))
     return asPromise(h(req))
   }
-  if (source === 'panbox_tingyou') {
-    const h = globalThis.__PANBOX_TINGYOU
+  if (source === 'ibox_tingyou') {
+    const h = globalThis.__IBOX_TINGYOU
     if (!h) return Promise.reject(new Error('听友音乐模块未就绪'))
     return asPromise(h(req))
   }
@@ -22836,7 +22736,7 @@ function handle(req) {
   }
 }
 
-// inited 声明按宿主分流：iBox 引擎声明 7 key（含内容站扩展）；
+// inited 声明按宿主分流：PanBox 引擎声明 7 key（含内容站扩展）；
 // 洛雪客户端 sources 白名单只认五平台且 actions 仅 musicUrl/lyric——按其规范声明（内容站在洛雪无浏览承载位）
 const SOUND_ACTIONS = ['musicUrl', 'lyric']
 const BROWSE_ACTIONS = ['home', 'category', 'search', 'playlist_cats', 'playlist_list', 'playlist_detail']
@@ -22853,8 +22753,8 @@ for (const s of FIVE) {
   }
 }
 if (IS_IBOX) {
-  declared.panbox_qtfm = { name: '蜻蜓电台', type: 'music', actions: ['musicUrl', ...BROWSE_ACTIONS], qualitys: ['128k'] }
-  declared.panbox_tingyou = { name: '听友音乐', type: 'music', actions: ['musicUrl', ...BROWSE_ACTIONS, 'detail'], qualitys: ['128k'] }
+  declared.ibox_qtfm = { name: '蜻蜓电台', type: 'music', actions: ['musicUrl', ...BROWSE_ACTIONS], qualitys: ['128k'] }
+  declared.ibox_tingyou = { name: '听友音乐', type: 'music', actions: ['musicUrl', ...BROWSE_ACTIONS, 'detail'], qualitys: ['128k'] }
 }
 
 send(EVENT_NAMES.inited, { status: true, sources: declared })
