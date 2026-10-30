@@ -18,7 +18,7 @@ TVBox / 影视仓等客户端：直接把上面链接填入配置地址（TVBox 
 https://raw.githubusercontent.com/alonjoik/omnisrc/main/music/panbox_music.js
 ```
 
-导入内容：酷我 / 酷狗 / QQ / 网易 / 咪咕五平台（搜索·榜单·歌词·取链）+ 蜻蜓电台 + 听友音乐。
+导入内容：酷我 / 酷狗 / QQ / 网易 / 咪咕五平台（搜索·榜单·歌词·取链）+ 蜻蜓电台 + 听友音乐 + 小B音源（bilibili 音轨，MV/官方音源完整无 VIP 墙）。
 模块拆分版与第三方源在 [music/](music/)：`panbox_qtfm.js` 蜻蜓电台、`panbox_tingyou.js` 听友音乐、`sound_1010.js` 1010聚合音源（MIT © Lincoln）。
 
 - 同步 = 清 js 缓存重新拉取，仓库更新后重按一次「同步源仓库」即跟随，**App 无需发版**

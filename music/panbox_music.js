@@ -1,8 +1,8 @@
 /**
  * @name PanBox音源
- * @description 一条链接全量音乐源：五平台(酷我/酷狗/QQ/网易/咪咕)搜索·榜单·歌词·取链 + 蜻蜓电台 + 听友音乐
- * @version 2.0.0
- * @author PanBox（内核 SDK © lyswhut lx-music；取链聚合 © Lincoln 六音音源 MIT）
+ * @description 一条链接全量音乐源：五平台(酷我/酷狗/QQ/网易/咪咕)搜索·榜单·歌词·取链 + 蜻蜓电台 + 听友音乐 + 小B音源(bilibili)
+ * @version 2.1.0
+ * @author PanBox（内核 SDK © lyswhut lx-music；取链聚合 © Lincoln 六音音源 MIT；B站协议 © listen1 MIT）
  * @homepage https://github.com/lyswhut/lx-music-mobile
  */
 /* eslint-disable */
@@ -933,6 +933,200 @@ send(EVENT_NAMES.inited, {
 })
 
   globalThis.__IBOX_TINGYOU = __cap.handler;
+})();
+;(function () {
+  const __cap = { handler: null };
+/*!
+ * @name PanBox扩展音源
+ * @description bilibili 音频源：搜索/取链走视频音轨（游客态，MV/官方音源完整无 VIP 墙）——协议参考 listen1（MIT）
+ * @version 1.1.0
+ * @author PanBox（协议 © listen1 chrome extension MIT）
+ * @homepage https://github.com/listen1/listen1_chrome_extension
+ */
+/* eslint-disable */
+// 协议（2026-10-29 实弹验证）：
+//   搜索 GET api.bilibili.com/x/web-interface/search/type?search_type=video&...（wbi 签名：
+//   nav 游客可得 wbi_img → img_key+sub_key 经 mixinTab 重排取 32 位 → md5(排序参数+wts + mixin_key)=w_rid）
+//   取链 view?bvid → cid → playurl?fnval=16 → dash.audio[]（音轨码率高于合并流）；
+//   CDN 强制 Referer: https://www.bilibili.com/（实测仅 UA 403）→ 返回 {url, header} 对象形态
+const EVENT_NAMES = { request: 'request', inited: 'inited', updateAlert: 'updateAlert' };
+  const request = globalThis.lx.request;
+  const on = (n, h) => { if (n === 'request') __cap.handler = h };
+  const send = () => {};
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
+const SRC_KEY = 'panbox_bili';
+const ID_PREFIX = SRC_KEY + '_';
+
+// ==================== HTTP ====================
+function httpGetJson(url, headers) {
+  return new Promise(function (resolve, reject) {
+    request(url, {
+      method: 'GET',
+      timeout: 12000,
+      headers: Object.assign({ 'User-Agent': UA }, headers || {}),
+    }, function (err, res) {
+      if (err) return reject(new Error('请求失败: ' + String((err && err.message) || err)));
+      if (res.statusCode !== 200) return reject(new Error('HTTP ' + res.statusCode));
+      resolve(typeof res.body === 'object' ? res.body : JSON.parse(res.body));
+    });
+  });
+}
+
+// ==================== wbi 签名（listen1 同款） ====================
+const WBI_MIXIN_TAB = [46, 47, 18, 2, 53, 8, 23, 32, 15, 50, 10, 31, 58, 3, 45, 35, 27, 43, 5,
+  49, 33, 9, 42, 19, 29, 28, 14, 39, 12, 38, 41, 13, 37, 48, 7, 16, 24,
+  55, 40, 61, 26, 17, 0, 1, 60, 51, 30, 4, 22, 25, 54, 21, 56, 59, 6, 63,
+  57, 62, 11, 36, 20, 34, 44, 52];
+let wbiCache = null;
+
+function keyOfUrl(u) {
+  const f = String(u).split('/');
+  return f[f.length - 1].split('.')[0];
+}
+
+function getMixinKey() {
+  if (wbiCache) return Promise.resolve(wbiCache);
+  return httpGetJson('https://api.bilibili.com/x/web-interface/nav').then(function (d) {
+    const wbi = ((d.data || {}).wbi_img) || {};
+    if (!wbi.img_url || !wbi.sub_url) throw new Error('wbi 密钥不可得');
+    const raw = keyOfUrl(wbi.img_url) + keyOfUrl(wbi.sub_url);
+    let m = '';
+    for (let i = 0; i < WBI_MIXIN_TAB.length; i++) m += raw[WBI_MIXIN_TAB[i]];
+    wbiCache = m.slice(0, 32);
+    return wbiCache;
+  });
+}
+
+function wbiQueryString(params, mixinKey) {
+  params.wts = Math.round(Date.now() / 1000);
+  const chrFilter = /[!'()*]/g;
+  const parts = Object.keys(params).sort().map(function (k) {
+    return encodeURIComponent(k) + '=' + encodeURIComponent(String(params[k]).replace(chrFilter, ''));
+  });
+  const qs = parts.join('&');
+  const rid = globalThis.lx.utils.crypto.md5(qs + mixinKey);
+  return qs + '&w_rid=' + rid;
+}
+
+// ==================== 工具 ====================
+function stripHtml(s) {
+  return String(s || '')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/&#39;/g, "'")
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>').trim();
+}
+
+function durToSec(text) {
+  const parts = String(text || '').split(':').map(Number);
+  if (parts.some(isNaN) || !parts.length) return 0;
+  return parts.reduce(function (acc, p) { return acc * 60 + p; }, 0);
+}
+
+function songRow(item) {
+  const pic = String(item.pic || '');
+  return {
+    vod_id: ID_PREFIX + (item.bvid || ''),
+    vod_name: stripHtml(item.title),
+    vod_pic: pic.startsWith('//') ? 'https:' + pic : pic.replace(/^http:\/\//, 'https://'),
+    vod_remarks: item.author || '',
+    vod_content: '',
+    vod_duration: durToSec(item.duration),
+  };
+}
+
+// ==================== 搜索 / 取链 ====================
+// buvid 风控通行证：游客搜索无 cookie 时短时第 2 次起 412 并进入冷却（实测）；
+// finger/spi 游客可取 buvid3/4，携带后搜索配额与真实浏览器同级（冷却期实测可通）
+let buvidCache = null;
+function getBuvid() {
+  if (buvidCache) return Promise.resolve(buvidCache);
+  return httpGetJson('https://api.bilibili.com/x/frontend/finger/spi').then(function (d) {
+    const dt = d.data || {};
+    if (!dt.b_3) throw new Error('buvid 不可得');
+    buvidCache = 'buvid3=' + dt.b_3 + '; buvid4=' + (dt.b_4 || '');
+    return buvidCache;
+  });
+}
+
+function biliSearch(wd, page) {
+  page = Number(page) || 1;
+  return Promise.all([getMixinKey(), getBuvid()]).then(function (r) {
+    const qs = wbiQueryString({ search_type: 'video', keyword: String(wd || ''), page: page }, r[0]);
+    // web 接口风控：Referer 必带（缺它 412），buvid cookie 放宽频率限制
+    return httpGetJson('https://api.bilibili.com/x/web-interface/search/type?' + qs, {
+      Referer: 'https://www.bilibili.com/',
+      Cookie: r[1],
+    });
+  }).then(function (d) {
+    if (d.code !== 0) throw new Error('B站搜索失败: ' + (d.message || d.code));
+    const data = d.data || {};
+    const list = (data.result || []).map(songRow);
+    const total = data.numResults || list.length;
+    return { list: list, total: total, page: page, pagecount: Math.max(1, Math.ceil(total / 20)) };
+  });
+}
+
+function biliPlayUrl(songmid) {
+  const bvid = String(songmid || '').slice(ID_PREFIX.length);
+  if (!bvid) return Promise.reject(new Error('缺少 bvid'));
+  return httpGetJson('https://api.bilibili.com/x/web-interface/view?bvid=' + encodeURIComponent(bvid))
+    .then(function (d) {
+      if (d.code !== 0 || !(d.data || {}).cid) throw new Error('视频信息不可得: ' + (d.message || d.code));
+      return d.data.cid;
+    })
+    .then(function (cid) {
+      // fnval=16 DASH：音轨独立（码率/完整度优于合并流），须带 Referer
+      return httpGetJson(
+        'https://api.bilibili.com/x/player/playurl?bvid=' + encodeURIComponent(bvid) + '&cid=' + cid + '&fnval=16',
+        { Referer: 'https://www.bilibili.com/' }
+      );
+    })
+    .then(function (d) {
+      const dash = ((d.data || {}).dash) || {};
+      const aud = (dash.audio || []).slice().sort(function (a, b) { return (b.bandwidth || 0) - (a.bandwidth || 0); });
+      const url = aud.length ? aud[0].baseUrl : '';
+      if (!url) throw new Error('未取得音轨（dash.flac/dolby 亦空）');
+      return { url: url, header: { 'User-Agent': UA, Referer: 'https://www.bilibili.com/' } };
+    });
+}
+
+// ==================== handler 注册 ====================
+on(EVENT_NAMES.request, function (req) {
+  if (req.source !== SRC_KEY) return Promise.reject(new Error('未知源: ' + req.source));
+  const info = req.info || {};
+  try {
+    switch (req.action) {
+      case 'search':
+        return biliSearch(info.wd, info.page);
+      case 'musicUrl':
+        return biliPlayUrl(info.musicInfo && info.musicInfo.songmid);
+      case 'lyric':
+        // B 站无歌词——返回空串由宿主网易同名兜底
+        return Promise.resolve('');
+      case 'home':
+        // 纯搜索型源：浏览页空态，入口即搜索框
+        return Promise.resolve({ class: [] });
+      default:
+        return Promise.reject(new Error('不支持入口: ' + req.action));
+    }
+  } catch (e) {
+    return Promise.reject(new Error(String((e && e.message) || e)));
+  }
+});
+
+send(EVENT_NAMES.inited, {
+  status: true,
+  sources: {
+    [SRC_KEY]: {
+      name: '小B音源',
+      type: 'music',
+      actions: ['search', 'musicUrl', 'lyric'],
+      qualitys: ['128k', '320k'],
+    },
+  },
+});
+
+  globalThis.__PANBOX_EXTRA = __cap.handler;
 })();
 "use strict";
 (() => {
@@ -22629,6 +22823,12 @@ function handle(req) {
     if (!h) return Promise.reject(new Error('听友音乐模块未就绪'))
     return asPromise(h(req))
   }
+  // 小B音源（bilibili 音轨，协议 © listen1 MIT）：整源路由到扩展模块
+  if (source === 'panbox_bili') {
+    const h = globalThis.__PANBOX_EXTRA
+    if (!h) return Promise.reject(new Error('小B音源模块未就绪'))
+    return asPromise(h(req))
+  }
   const mod = need(source)
   // 五平台取链走音源模块（六音聚合）；歌词/浏览走内核
   if (action === 'musicUrl') {
@@ -22755,6 +22955,7 @@ for (const s of FIVE) {
 if (IS_IBOX) {
   declared.ibox_qtfm = { name: '蜻蜓电台', type: 'music', actions: ['musicUrl', ...BROWSE_ACTIONS], qualitys: ['128k'] }
   declared.ibox_tingyou = { name: '听友音乐', type: 'music', actions: ['musicUrl', ...BROWSE_ACTIONS, 'detail'], qualitys: ['128k'] }
+  declared.panbox_bili = { name: '小B音源', type: 'music', actions: ['search', 'musicUrl', 'lyric'], qualitys: ['128k', '320k'] }
 }
 
 send(EVENT_NAMES.inited, { status: true, sources: declared })
