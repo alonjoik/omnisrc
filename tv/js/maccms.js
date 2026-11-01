@@ -1,6 +1,6 @@
 // maccms — 苹果CMS V10 采集站（json / xml 双形态自适应；壳+源整合 批次3 模板族）
 // 站址来源 ext：{"api":"..."}（批次4 落库形态）或裸 URL 字符串；api 路径已含 /at/xml/ 的走 RSS 解析
-//@tpl-ver 20261024 — 新增二级筛选（地区/年份/排序，MY_FL 消费 + 静态筛选组）
+//@tpl-ver 20261101 — pagecount 透传（_list 返回 {list,pagecount}，一级返回对象——否则宿主记 0、翻页器永不出现、分类只见第一页）
 var rule = {
     title: '苹果CMS',
     host: 'http://127.0.0.1',   // 占位：实际请求走 api() 动态站址
@@ -109,10 +109,14 @@ var rule = {
         return { class: out };
     },
 
-    // 列表：json → r.list[{vod_id,vod_name,vod_pic,vod_remarks}]；xml → <video> 节点
+    // 列表：json → r.list[{vod_id,vod_name,vod_pic,vod_remarks}] + pagecount；
+    // xml → <video> 节点 + <list pagecount="N"> 属性。pagecount 是前端翻页契约
+    //（宿主 category 只透传对象返回的 pagecount；曾因丢弃致翻页器永不出现、分类内容只能看到第一页）
     _list: function (c) {
-        var d = [];
+        var d = [], pc = 0;
         if (this.isXml()) {
+            var lm = c.match(/<list[^>]*pagecount="(\d+)"/i);
+            if (lm) pc = parseInt(lm[1], 10) || 0;
             c.split('<video>').slice(1).forEach(function (seg) {
                 seg = seg.split('</video>')[0];
                 var g = function (tag) {
@@ -122,7 +126,9 @@ var rule = {
                 d.push({ title: g('name') || g('title'), img: g('pic'), desc: g('note') || g('des'), url: g('id') });
             });
         } else {
-            (JSON.parse(c).list || []).forEach(function (v) {
+            var r = JSON.parse(c);
+            pc = Number(r.pagecount) || 0;
+            (r.list || []).forEach(function (v) {
                 d.push({
                     title: v.vod_name || '',
                     img: v.vod_pic || '',
@@ -131,7 +137,7 @@ var rule = {
                 });
             });
         }
-        return d;
+        return { list: d, pagecount: pc };
     },
 
     一级: function () {
@@ -139,7 +145,8 @@ var rule = {
             '&t=' + encodeURIComponent(this.MY_CATE || '') + '&pg=' + (this.MY_PAGE || 1) +
             this._filterQuery();
         var c = request(u, { headers: { 'User-Agent': this.UA } }).content;
-        return this._list(c);
+        var r = this._list(c);
+        return { list: r.list, pagecount: r.pagecount };
     },
 
     搜索: function () {
@@ -151,7 +158,7 @@ var rule = {
             var u = this.api() + '?ac=' + (this.isXml() ? 'videolist&at=xml' : 'videolist') +
                 '&wd=' + encodeURIComponent(this.wd || '') + '&t=' + encodeURIComponent(cates[i]);
             var c = request(u, { headers: { 'User-Agent': this.UA } }).content;
-            this._list(c).forEach(function (v) {
+            this._list(c).list.forEach(function (v) {
                 if (seen[v.url]) return;
                 seen[v.url] = 1;
                 d.push(v);
